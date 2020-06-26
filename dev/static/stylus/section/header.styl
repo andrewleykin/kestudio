@@ -73,13 +73,25 @@
     display flex
 
 .header__logo
-  display none
+  position absolute
+  top 50px
+  left 50%
+  transform translateX(-50%)
   svg
-    fill gray-6
-    width 86px
-    height 22px
+    fill gray-1
+    width 170px
+    height 43px
+  @media(max-width breakpoint-lg)
+    top 32px
   @media (max-width breakpoint-md)
-    display block
+    position relative
+    transform none
+    top unset
+    left unset
+    svg
+      fill gray-6
+      width 86px
+      height 22px
 
 .header__menu
   @media (max-width breakpoint-md)

@@ -39,6 +39,8 @@
   letter-spacing 1px
   color gray-1
   margin-bottom 50px
+  @media (max-width breakpoint-xl)
+    font-size 36px
 
 .card-info__wrap
   max-width 450px
@@ -72,6 +74,7 @@
   color gray-1
   display block
   margin-left 15px
+  margin-bottom -3px
 
 .card-info__params
   display flex
@@ -79,7 +82,7 @@
   margin-bottom 60px
 
 .card-info__params-block
-  max-width 105px
+  max-width 110px
   width 100%
   &+&
     margin-left 10px
@@ -110,7 +113,7 @@
 .card-info__readiness-row
   display flex
   justify-content space-between
-  align-items center
+  align-items baseline
 
 .card-info__readiness-name
   font-weight 500
