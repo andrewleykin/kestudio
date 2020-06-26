@@ -110,6 +110,10 @@
   @media (max-width breakpoint-md)
     display block
     margin 0 0 auto 16px
+    &.hidden
+      .select-field__active
+        opacity 0
+        visibility hidden
 
 .catalog-filters__item
   width 100%
@@ -118,10 +122,6 @@
   @media (max-width breakpoint-md)
     max-width 100%
     margin 0
-    &.hidden
-      .select-field__active
-        opacity 0
-        visibility hidden
 
 .catalog-filters__result
   display none

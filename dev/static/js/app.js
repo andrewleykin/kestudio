@@ -33,6 +33,7 @@
 			formTitle.html(filterTitleString)
 			fields.removeClass(openClass)
 			filtersItem.removeClass(hiddenClass)
+			$('.catalog-filters__list').removeClass('hidden')
 		}
 
 		const closeForm = () => {
@@ -54,6 +55,18 @@
 
 		resetButton.click(() => {
 			fields.each((index, field) => {
+				if ($(field).find('.range-field__slider-slider').length) {
+					$(field).find('.range-field__slider-slider').each((index, item) => {
+						if (item.noUiSlider) {
+							const start = $(item).data('start')
+							const end = $(item).data('end')
+							const suffix = $(item).data('suffix')
+							$(field).find('.range-field__select-start').html(`${start} ${suffix} `)
+							$(field).find('.range-field__select-end').html(` ${end} ${suffix}`)
+							item.noUiSlider.set([start, end])
+						}
+					})
+				}
 				$(field).find('.select-field__active').html($(field).data('placeholder'))
 			})
 			$('.select-field__item').removeClass('active')
@@ -101,7 +114,7 @@
 					active.html(itemText)
 					self.removeClass('open')
 					$('.catalog-filters__form-title').html('фильтр')
-					$('.catalog-filters__item').removeClass('hidden')
+					$('.catalog-filters__list').removeClass('hidden')
 				}
 			})
 
@@ -118,12 +131,13 @@
 				active.html(placeholder)
 				self.removeClass('open').removeClass('active')
 				$('.catalog-filters__form-title').html('фильтр')
-				$('.catalog-filters__item').removeClass('hidden')
 				items.removeClass('active')
+				$('.catalog-filters__list').removeClass('hidden')
 			})
 		}
 
-		const rangeList = (self) => {
+		const rangeList = (self, active) => {
+			const placeholder = self.data('placeholder')
 			const slider = self.find('.range-field__slider-slider')
 			const startEl = self.find('.range-field__select-start')
 			const endEl = self.find('.range-field__select-end')
@@ -149,12 +163,18 @@
 			});
 
 			slider[0].noUiSlider.on('update', (e) => {
-				startEl.html(`${e[0]} ${suffix} `)
-				endEl.html(` ${e[1]} ${suffix}`)
+				if (+e[0] !== start || +e[1] !== end) {
+					startEl.html(`${e[0]} ${suffix} `)
+					endEl.html(` ${e[1]} ${suffix}`)
+					active.html(`${e[0]} ${suffix} - ${e[1]} ${suffix}`)
+				}
 			});
 
 			resetButton.click(() => {
+				startEl.html(`${start} ${suffix} `)
+				endEl.html(` ${end} ${suffix}`)
 				slider[0].noUiSlider.set([start, end])
+				active.html(placeholder)
 			})
 		}
 
@@ -167,7 +187,7 @@
 				self.toggleClass('open')
 				selects.not(self).removeClass('open')
 				if (isMobile) {
-					selects.not(self).closest('.catalog-filters__item').addClass('hidden')
+					$('.catalog-filters__list').addClass('hidden')
 					$('.catalog-filters__form-title').html(`<i></i> ${placeholder}`)
 				}
 			})
@@ -176,7 +196,7 @@
 				selectList(self, active)
 			}
 			if (self.data('range')) {
-				rangeList(self)
+				rangeList(self, active)
 			}
 		})
 

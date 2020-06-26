@@ -1609,14 +1609,14 @@ textarea {
     margin: 0 0 auto 16px;
   }
 
+  .catalog-filters__list.hidden .select-field__active {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .catalog-filters__item {
     max-width: 100%;
     margin: 0;
-  }
-
-  .catalog-filters__item.hidden .select-field__active {
-    opacity: 0;
-    visibility: hidden;
   }
 
   .catalog-filters__result {
