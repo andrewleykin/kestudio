@@ -23,6 +23,7 @@
 		const formTitle = $('.catalog-filters__form-title')
 		const fields = $('.select-field')
 		const filtersItem = $('.catalog-filters__item')
+		const resetButton = $('.catalog-filters__form-reset')
 		const filterTitleString = 'фильтр'
 		const activeClass = 'active'
 		const openClass = 'open'
@@ -50,6 +51,13 @@
 
 		$('.catalog-filters__form-close').click(closeForm)
 		$('.catalog-filters__result').click(closeForm)
+
+		resetButton.click(() => {
+			fields.each((index, field) => {
+				$(field).find('.select-field__active').html($(field).data('placeholder'))
+			})
+			$('.select-field__item').removeClass('active')
+		})
 
 		formTitle.click((e) => {
 			e.stopPropagation()
@@ -106,10 +114,12 @@
 			})
 
 			resetButton.click(() => {
+				activeItems = []
 				active.html(placeholder)
 				self.removeClass('open').removeClass('active')
 				$('.catalog-filters__form-title').html('фильтр')
 				$('.catalog-filters__item').removeClass('hidden')
+				items.removeClass('active')
 			})
 		}
 
@@ -202,6 +212,10 @@
 				asNavFor: thumbEl,
 				infinity: true,
 				arrows: false,
+				dots: true,
+				customPaging: function() {
+					return ''
+				}
 			})
 	
 			arrows.click(function(){

@@ -806,7 +806,7 @@ textarea {
 .card-modal {
   padding-top: 50px;
   padding-bottom: 70px;
-  max-width: 90%;
+  max-width: 95%;
 }
 
 .card-modal__wrap {
@@ -840,11 +840,11 @@ textarea {
 }
 
 .card-views__thumbs-slider {
-  height: 521px;
+  height: 492px;
 }
 
 .card-views__thumbs-slide+.card-views__thumbs-slide {
-  margin-top: 27px;
+  margin-top: 20px;
 }
 
 .card-views__thumbs-video {
@@ -866,7 +866,7 @@ textarea {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  margin-top: 27px;
+  margin-top: 20px;
 }
 
 .card-views__thumbs-video:after {
@@ -932,6 +932,35 @@ textarea {
   overflow: hidden;
 }
 
+.card-views__display-slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+}
+
+.card-views__display-slider .slick-dots li {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.card-views__display-slider .slick-dots li.slick-active {
+  background-color: #4f4f4f;
+}
+
+.card-views__display-slider .slick-dots li + li {
+  margin-left: 14px;
+}
+
 .card-info {
   width: 100%;
   margin-left: 50px;
@@ -974,7 +1003,7 @@ textarea {
 .card-info__id {
   color: #bdbdbd;
   display: block;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
 }
 
 .card-info__name {
@@ -1000,7 +1029,7 @@ textarea {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .card-info__price {
@@ -1132,23 +1161,22 @@ textarea {
   color: #333;
 }
 
-.card-info__btn {
-  max-width: 310px;
-  padding: 20px 30px;
-  margin-bottom: 40px;
-}
-
-.card-info__next {
-  margin-left: auto;
-}
-
 .card-info__actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.card-info__btn {
+  width: 100%;
+  max-width: 310px;
+  padding: 20px;
 }
 
 .card-info__next {
