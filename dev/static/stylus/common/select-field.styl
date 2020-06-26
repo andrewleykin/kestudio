@@ -15,6 +15,10 @@
         display none
     .select-field__close
       display block
+  &[data-range="true"]
+    .range-field__reset
+      &.mobile
+        display none
   @media (max-width breakpoint-md)
     &.open
       .select-field__reset
@@ -22,6 +26,10 @@
     &.active
       .select-field__close
         display none
+    &.open[data-range="true"]
+      .range-field__reset
+        &.mobile
+          display block
 
 .select-field__reset
   display none

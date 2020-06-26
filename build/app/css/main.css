@@ -119,9 +119,9 @@ textarea {
 
 .btn {
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -202,6 +202,10 @@ textarea {
 
 .select-field.active .select-field__close {
   display: block;
+}
+
+.select-field[data-range="true"] .range-field__reset.mobile {
+  display: none;
 }
 
 .select-field__reset {
@@ -1232,6 +1236,7 @@ textarea {
 
   .btn {
     font-size: 0.875rem;
+    line-height: 0.875rem;
     padding: 19px 0;
     width: 100%;
   }
@@ -1273,6 +1278,10 @@ textarea {
 
   .select-field.active .select-field__close {
     display: none;
+  }
+
+  .select-field.open[data-range="true"] .range-field__reset.mobile {
+    display: block;
   }
 
   .select-field__active {
@@ -1323,6 +1332,10 @@ textarea {
     padding-top: 20px;
     padding-right: 30px;
     padding-bottom: 20px;
+  }
+
+  .range-field .range-field__reset {
+    display: none;
   }
 
   .range-field__info {
