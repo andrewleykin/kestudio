@@ -1,14 +1,17 @@
 .card-info
   button.card-info__close(type="button" aria-label="Закрыть карточку" data-remodal-action="close")
     +icon('close-modal')
-  span.card-info__legend.card-info__id #647094
   h1.card-info__name Алия Гарифуллина
   .card-info__wrap
     .card-info__header
+      .card-info__price.card-info__price--red
+        span.card-info__price-num 2000
+          i.rouble-icon
+        span.card-info__legend стоимость съемок от 3&nbsp;часов
       .card-info__price
         span.card-info__price-num 1000
           i.rouble-icon
-        span.card-info__legend стоимость одного часа съемок
+        span.card-info__legend стоимость съемок 1&nbsp;часа 
       .card-info__expirience
         span.card-info__legend Опыт 
         span.card-info__expirience-value 5 лет

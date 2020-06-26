@@ -27,32 +27,29 @@
   text-transform uppercase
   color gray-3
 
-.card-info__id
-  color gray-4
-  display block
-  margin-bottom 50px
-
 .card-info__name
   font-weight bold
   font-size 48px
   line-height 120%
   letter-spacing 1px
   color gray-1
-  margin-bottom 50px
+  margin-bottom 25px
   @media (max-width breakpoint-xl)
     font-size 36px
-
-.card-info__wrap
-  max-width 450px
 
 .card-info__header
   display flex
   align-items flex-end
-  justify-content space-between
   margin-bottom 50px
 
 .card-info__price
   margin-right 10px
+  max-width 145px
+  &.card-info__price--red
+    margin-right 40px
+    .card-info__price-num,
+    .card-info__legend
+      color color-red
 
 .card-info__price-num
   font-weight bold
@@ -66,9 +63,10 @@
 .card-info__expirience
   display flex
   align-items flex-end
+  margin-left auto
 
 .card-info__expirience-value
-  font-size 16px
+  font-size 18px
   line-height 125%
   letter-spacing 0.8px
   color gray-1
@@ -79,7 +77,8 @@
 .card-info__params
   display flex
   justify-content space-between
-  margin-bottom 60px
+  margin-bottom 50px
+  max-width 480px
 
 .card-info__params-block
   max-width 110px
@@ -97,7 +96,8 @@
   display block
 
 .card-info__readiness
-  margin-bottom 70px
+  margin-bottom 40px
+  max-width 480px
 
 .card-info__readiness-wrap
   margin-top 25px
@@ -156,5 +156,6 @@
   transition all .2s
   padding 5px
   background-color transparent
+  margin-bottom -5px
   &:hover
     color gray-1
