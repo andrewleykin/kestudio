@@ -1,8 +1,12 @@
 .menu
   display flex
   align-items center
+  margin 0 -20px
+  @media(max-width breakpoint-lg)
+    margin 0 -10px
   @media (max-width breakpoint-md)
     display block
+    margin 0
 
 .menu__link
   font-size 18px
@@ -17,7 +21,7 @@
     margin-right auto
   @media(max-width breakpoint-lg)
     padding 10px
-    font-size 12px
+    font-size 14px
   @media(max-width breakpoint-md)
     display flex
     align-items center
