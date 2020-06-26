@@ -7,7 +7,8 @@ module.exports = function () {
             .pipe($.gp.autoprefixer({
                 browsers: ['last 3 version']
             }))
-            .pipe($.gp.csso())
+            .pipe($.gp.pxtorem())
+            .pipe($.gcmq())
             .pipe($.gulp.dest('./build/app/css/'))
     });
 
