@@ -1,0 +1,68 @@
+.footer
+  background-color gray-1
+  padding-top 40px
+  padding-bottom 45px
+  @media (max-width breakpoint-md)
+    padding 15px 0
+
+.footer__wrap
+  display flex
+  align-items center
+  justify-content space-between
+
+.footer__contact
+  max-width 320px
+  @media (max-width breakpoint-md)
+    width 100%
+    max-width 100%
+    display flex
+    align-items center
+    justify-content space-between
+    padding 0 20px 0 2px
+
+.footer__copyright
+  display none
+  color gray-4
+  font-weight 500
+  font-size 10px
+  line-height 120%
+  letter-spacing 1.5px
+  text-transform uppercase
+  @media (max-width breakpoint-md)
+    display block
+
+.footer__links
+  display flex
+  margin-bottom 15px
+  a
+    &:hover
+      svg
+        fill gray-4
+  a + a
+    margin-left 10px
+  svg
+    transition all .2s
+    width 20px
+    height 20px
+    fill gray-6
+  @media (max-width breakpoint-md)
+    margin-bottom 0
+    a + a
+      margin-left 25px
+
+.footer__text,
+.footer__telegram
+  font-size 16px
+  line-height 125%
+  letter-spacing 0.8px
+  color gray-6
+  @media (max-width breakpoint-md)
+    display none
+
+.footer__telegram
+  a
+    color inherit
+    &:hover
+      text-decoration underline
+  @media (max-width breakpoint-md)
+    display none

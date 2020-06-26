@@ -2,20 +2,22 @@
 
 .container 
 	width 100%
-	max-width 1170px
+	max-width 1200px
 	margin 0 auto
 	@media (max-width: 1200px) 
 		padding 0 10px
 
-
-
+.overflow-hidden
+	overflow hidden
 
 // футер к низу
 
-body 
+.wrapper
+	height 100%
 	display flex
 	flex-direction column
 
-
 .main 
 	flex 1
+	@media (max-width breakpoint-md)
+		padding-top 50px

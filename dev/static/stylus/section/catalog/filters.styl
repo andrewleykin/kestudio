@@ -1,0 +1,130 @@
+.catalog-filters
+  margin-bottom 25px
+  @media (max-width breakpoint-md)
+    margin-bottom 18px
+
+.catalog-filters__btn
+  display none
+  justify-content center
+  align-items center
+  background-color gray-5
+  width 100%
+  height 52px
+  font-weight 500
+  font-size 10px
+  line-height 120%
+  letter-spacing 1.5px
+  text-transform uppercase
+  cursor pointer
+  @media (max-width breakpoint-md)
+    display flex
+
+.catalog-filters__form
+  @media (max-width breakpoint-md)
+    position fixed
+    right -100%
+    top 0
+    width 100%
+    max-width 87%
+    height 100%
+    max-height 736px
+    transition all .2s
+    &:before
+      content ''
+      display none
+      position fixed
+      top 0
+      left 0
+      right 0
+      bottom 0
+      z-index -1
+      background-color rgba(gray-1, .5)
+    &.active
+      right 0
+      &:before
+        display block
+      .catalog-filters__form-reset
+        display block
+
+.catalog-filters__form-reset
+  position fixed
+  top 16px
+  right 23px
+  background-color transparent
+  font-weight 500
+  font-size 10px
+  letter-spacing 1.5px
+  text-transform uppercase
+  padding 10px
+  color gray-3
+  display none
+  cursor pointer
+
+.catalog-filters__form-wrap
+  @media (max-width breakpoint-md)
+    display flex
+    flex-direction column
+    background-color #fff
+    height 100%
+    overflow-y auto
+
+.catalog-filters__form-close
+  display none
+  position absolute
+  right calc(100% + 10px)
+  top 15px
+  background-color transparent
+  cursor pointer
+  svg
+    width 20px
+    height 20px
+    fill #fff
+  @media (max-width breakpoint-md)
+    display block
+
+.catalog-filters__form-title
+  display none
+  align-items center
+  flex none
+  background-color gray-6
+  height 61px
+  font-size 14px
+  font-weight bold
+  letter-spacing 2px
+  text-transform uppercase
+  padding 0 15px
+  i
+    width 24px
+    height 20px
+    margin-right 20px
+    background-image url("data:image/svg+xml,%3Csvg width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 8.70248H4.98925L11.8879 1.8347L10.045 0L0 10L10.045 20L11.8879 18.1653L4.98925 11.2975H24V8.70248Z' fill='black'/%3E%3C/svg%3E%0A")
+    cursor pointer
+  @media (max-width breakpoint-md)
+    display flex
+
+.catalog-filters__list
+  display flex
+  flex-wrap wrap
+  margin 0 -9px -25px
+  @media (max-width breakpoint-md)
+    display block
+    margin 0 0 auto 16px
+
+.catalog-filters__item
+  width 100%
+  max-width 185px
+  margin 0 9px 25px
+  @media (max-width breakpoint-md)
+    max-width 100%
+    margin 0
+    &.hidden
+      .select-field__active
+        opacity 0
+        visibility hidden
+
+.catalog-filters__result
+  display none
+  @media (max-width breakpoint-md)
+    display flex
+    margin 12px auto
+    width calc(100% - 25px)

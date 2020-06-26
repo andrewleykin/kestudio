@@ -1,0 +1,25 @@
+section.catalog-list(data-remodal-target="name_slug")
+  .container
+    span.catalog-list__all 550 моделей по вашему запросу
+    .catalog-list__blocks
+      .catalog-list__block
+        include ./block
+        // Этот блок надо вставлять в каждый .catalog-list__block со своим data-remodal-id
+        include ../card/modal
+      .catalog-list__block
+        include ./block
+      .catalog-list__block
+        include ./block
+      .catalog-list__block
+        include ./block
+      .catalog-list__block
+        include ./block
+      .catalog-list__block
+        include ./block
+      .catalog-list__block
+        include ./block
+      .catalog-list__block
+        include ./block
+    span.catalog-list__views Показаны 20 из 575 моделей
+    button.catalog-list__btn.btn 
+      span Показать еще

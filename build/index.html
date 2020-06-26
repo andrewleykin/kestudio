@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title>
+    <title>Каталог</title>
     <meta http-equiv="X-UA-Compatible" content="IE = edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -11,9 +11,51 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
     <body>
       <div class="wrapper">
+        <header class="header">
+          <div class="container">
+            <div class="header__wrap">
+              <button class="header__burger" type="button" aria-label="Открыть меню"><span></span></button>
+              <div class="header__logo">
+                <svg class="icon icon-logo ">
+                  <use xlink:href="app/img/svg/symbol/sprite.svg#logo"></use>
+                </svg>
+              </div>
+              <div class="header__menu">
+                <nav class="menu"><a class="menu__link" href="#">О студии</a><a class="menu__link" href="#">Услуги</a><a class="menu__link active" href="#">Модели</a><a class="menu__link logo" href="#">
+                    <svg class="icon icon-logo ">
+                      <use xlink:href="app/img/svg/symbol/sprite.svg#logo"></use>
+                    </svg></a><a class="menu__link" href="#">Стать моделью</a><a class="menu__link" href="#">Оплата</a><a class="menu__link" href="#">Контакты</a></nav>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="index-page">
+            <div class="container">
+              <h1>Страница находится в разработке</h1><a href="catalog.html">Каталог</a>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrap">
+              <div class="footer__contact"><span class="footer__copyright">&copy;2020 KE Studio</span>
+                <div class="footer__links"><a href="#">
+                    <svg class="icon icon-instagram ">
+                      <use xlink:href="app/img/svg/symbol/sprite.svg#instagram"></use>
+                    </svg></a><a href="#">
+                    <svg class="icon icon-telegram ">
+                      <use xlink:href="app/img/svg/symbol/sprite.svg#telegram"></use>
+                    </svg></a></div>
+                <p class="footer__text">Республика Татарстан, г. Иннополис, ул. Спортивная, д. 104</p>
+              </div>
+              <p class="footer__telegram">по всем вопросам telegram: <a href="#">@KE_studio</a></p>
+            </div>
+          </div>
+        </footer>
       </div>
       <script src="app/js/libs.min.js"></script>
-      <script src="app/js/main.js"></script>
+      <script src="app/js/app.js"></script>
     </body>
   </head>
 </html>

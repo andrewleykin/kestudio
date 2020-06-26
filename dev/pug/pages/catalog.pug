@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Каталог'
+
+block content
+	.catalog-page
+		include ../section/catalog/title
+		include ../section/catalog/filters
+		include ../section/catalog/list

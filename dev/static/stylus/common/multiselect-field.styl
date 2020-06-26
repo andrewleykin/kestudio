@@ -1,0 +1,42 @@
+.multiselect-field
+  .select-field__item
+    padding-left 40px
+    position relative
+    &:before,
+    &:after
+      content ''
+      display block
+      position absolute
+    &:before
+      top 7px
+      left 10px
+      width 20px
+      height 20px
+      border 2px solid gray-5
+      border-radius 3px
+    &:after
+      left 14px
+      top 11px
+      width 12px
+      height 12px
+      background-position center
+      background-repeat no-repeat
+      background-size contain
+      background-image url("data:image/svg+xml,%3Csvg width='15' height='12' viewBox='0 0 15 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.76691 9.46756L1.21092 5.73602L0 6.99776L4.76691 12L15 1.26174L13.7976 0L4.76691 9.46756Z' fill='%232A2C36'/%3E%3C/svg%3E%0A")
+      opacity 0
+    &.active
+      &:before
+        border-color gray-6
+        background-color gray-6
+      &:after
+        opacity 1
+    input
+      display none
+  @media (max-width breakpoint-md)
+    .select-field__item
+      &:before
+        top 18px
+        left 0
+      &:after
+        top 22px
+        left 4px

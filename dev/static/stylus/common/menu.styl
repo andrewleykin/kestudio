@@ -1,0 +1,36 @@
+.menu
+  display flex
+  align-items center
+  @media (max-width breakpoint-md)
+    display block
+
+.menu__link
+  font-size 18px
+  line-height 21px
+  letter-spacing 0.01em
+  color gray-1
+  padding 20px
+  &:hover,
+  &.active
+    text-decoration underline
+  &.logo
+    margin 0 auto
+    svg
+      max-width 120px
+      fill gray-1
+  @media(max-width breakpoint-lg)
+    padding 15px
+  @media(max-width breakpoint-md)
+    display flex
+    align-items center
+    padding 0 16px
+    height 56px
+    background-color gray-1
+    color #fff
+    &:hover,
+    &.active
+      text-decoration none
+    &+&
+      border-top 1px solid #4F4F4F
+    &.logo
+      display none

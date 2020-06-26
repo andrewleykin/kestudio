@@ -1,0 +1,16 @@
+.select-field(data-range="true" data-placeholder="Возраст")
+  span.select-field__active Возраст
+  .range-field.select-field__list
+    .range-field__info
+      .range-field__info-block
+        span.range-field__name Выбранный возрастной диапазон
+        p.range-field__select
+          span.range-field__select-start
+          | -
+          span.range-field__select-end
+      button.range-field__reset(type="button") сброс
+    .range-field__slider
+      .range-field__slider-info
+        span.range-field__slider-min 3
+        span.range-field__slider-max 45
+      .range-field__slider-slider(data-min="3" data-max="45" data-start="18" data-end="23" data-step="5" data-suffix="")

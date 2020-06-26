@@ -1,0 +1,31 @@
+section.catalog-filters
+  button.catalog-filters__btn(type="button") 
+    span фильтр
+  .container
+    form.catalog-filters__form
+      .catalog-filters__form-wrap
+        button.catalog-filters__form-close(type="button" aria-label="Закрыть фильтр")
+          +icon('close')
+        button.catalog-filters__form-reset(type="button") сброс всех фильтров
+        h5.catalog-filters__form-title фильтр
+        .catalog-filters__list
+          .catalog-filters__item
+            include ../../modules/select-field
+          .catalog-filters__item
+            include ../../modules/range-field
+          .catalog-filters__item
+            include ../../modules/multiselect-field
+          .catalog-filters__item
+            include ../../modules/select-field
+          .catalog-filters__item
+            include ../../modules/select-field
+          .catalog-filters__item
+            include ../../modules/select-field
+          .catalog-filters__item
+            include ../../modules/select-field
+          .catalog-filters__item
+            include ../../modules/select-field
+          .catalog-filters__item
+            include ../../modules/select-field
+        button.btn.catalog-filters__result(type="button") 
+          span Показать результаты

@@ -1,0 +1,90 @@
+.header
+  padding-top 40px
+  &:before
+    content ''
+    display none
+    position fixed
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index -1
+    background-color rgba(gray-1, .5)
+  @media (max-width breakpoint-md)
+    padding-top 0
+    background-color gray-1
+    height 50px
+    position fixed
+    top 0
+    left 0
+    right 0
+    .container
+      height 100%
+    &.active
+      &:before
+        display block
+      .header__logo
+        opacity 0
+        visibility hidden
+      .header__menu
+        top 50px
+      .header__burger
+        span
+          opacity 0
+        &::before 
+          margin-bottom 0
+          transform translateY(2px) rotate(45deg)
+        &::after 
+          margin-top 0
+          transform translateY(-2px)  rotate(-45deg)
+
+.header__wrap
+  @media (max-width breakpoint-md)
+    display flex
+    align-items center
+    justify-content center
+    height 100%
+
+.header__burger
+  width = 20px
+  height = 2px
+  translate = 5px
+  bg = gray-6
+
+  cursor pointer
+  display none
+  flex-direction column
+  background-color transparent
+  position absolute
+  left 20px
+  top 50%
+  transform: translateY(-50%)
+  &::before,&::after,span
+    content ""
+    display block
+    width width
+    height height
+    background bg
+  &::before
+    margin-bottom translate
+  &::after
+    margin-top translate
+  @media (max-width breakpoint-md)
+    display flex
+
+.header__logo
+  display none
+  svg
+    fill gray-6
+    width 86px
+    height 22px
+  @media (max-width breakpoint-md)
+    display block
+
+.header__menu
+  @media (max-width breakpoint-md)
+    position fixed
+    top -100%
+    left 0
+    right 0
+    transition all .4s

@@ -4,6 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "dev": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Лейкин Андрей Романович",
@@ -41,9 +42,11 @@
     "jquery": "^3.2.1",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
+    "nouislider": "^14.5.0",
     "remodal": "^1.1.1",
     "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.8",
+    "wnumb": "^1.2.0",
     "wowjs": "^1.1.3"
   }
 }

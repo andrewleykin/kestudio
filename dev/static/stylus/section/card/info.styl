@@ -1,0 +1,159 @@
+.card-info
+  width 100%
+  margin-left 50px
+  flex auto
+  position relative
+  text-align left
+
+.card-info__close
+  position absolute
+  top 0
+  right 0
+  cursor pointer
+  background-color transparent
+  svg
+    width 50px
+    height 50px
+    transition all .2s
+  &:hover
+    svg
+      fill gray-3
+
+.card-info__legend
+  font-weight 500
+  font-size 10px
+  line-height 120%
+  letter-spacing 1.5px
+  text-transform uppercase
+  color gray-3
+
+.card-info__id
+  color gray-4
+  display block
+  margin-bottom 55px
+
+.card-info__name
+  font-weight bold
+  font-size 48px
+  line-height 120%
+  letter-spacing 1px
+  color gray-1
+  margin-bottom 50px
+
+.card-info__wrap
+  max-width 450px
+
+.card-info__header
+  display flex
+  align-items flex-end
+  justify-content space-between
+  margin-bottom 80px
+
+.card-info__price
+  margin-right 10px
+
+.card-info__price-num
+  font-weight bold
+  font-size 36px
+  line-height 120%
+  letter-spacing 1px
+  color gray-1
+  margin-bottom 5px
+  display block
+
+.card-info__expirience
+  display flex
+  align-items flex-end
+
+.card-info__expirience-value
+  font-size 16px
+  line-height 125%
+  letter-spacing 0.8px
+  color gray-1
+  display block
+  margin-left 15px
+
+.card-info__params
+  display flex
+  justify-content space-between
+  margin-bottom 60px
+
+.card-info__params-block
+  max-width 105px
+  width 100%
+  &+&
+    margin-left 10px
+  .card-info__legend
+    letter-spacing 1px
+
+.card-info__params-value
+  font-size 24px
+  line-height 120%
+  letter-spacing 1px
+  color gray-1
+  display block
+
+.card-info__readiness
+  margin-bottom 70px
+
+.card-info__readiness-wrap
+  margin-top 25px
+  display flex
+  justify-content space-between
+
+.card-info__readiness-view
+  width 100%
+  max-width 237px
+  .card-info__readiness-row + .card-info__readiness-row
+    margin-top 7px
+
+.card-info__readiness-row
+  display flex
+  justify-content space-between
+  align-items center
+
+.card-info__readiness-name
+  font-weight 500
+  font-size 14px
+  line-height 120%
+  letter-spacing 1px
+  color gray-1
+
+.card-info__readiness-perc
+  font-size 12px
+  line-height 125%
+  letter-spacing 1px
+  color gray-3
+  margin-left 10px
+
+.card-info__readiness-params
+  max-width 143px
+  width 100%
+  margin-left 10px
+
+.card-info__readiness-value
+  margin-left 10px
+  font-size 24px
+  line-height 120%
+  letter-spacing 1px
+  color gray-1
+
+.card-info__btn
+  max-width 310px
+  padding 20px 30px
+  margin-bottom 40px
+
+.card-info__next
+  margin-left auto
+
+.card-info__actions
+  display flex
+  justify-content flex-end
+
+.card-info__next
+  cursor pointer
+  transition all .2s
+  padding 5px
+  background-color transparent
+  &:hover
+    color gray-1
