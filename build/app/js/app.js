@@ -37,12 +37,14 @@
 		const closeForm = () => {
 			form.removeClass(activeClass)
 			$('body').removeClass('overflow-hidden')
+			$('.header__burger').removeClass('hidden')
 			clearField()
 		}
 
 		$('.catalog-filters__btn').click((e) => {
 			e.stopPropagation()
 			$('body').addClass('overflow-hidden')
+			$('.header__burger').addClass('hidden')
 			$('.catalog-filters__form').addClass(activeClass)
 		})
 
