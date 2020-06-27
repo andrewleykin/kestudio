@@ -1,6 +1,6 @@
 module.exports = function() {
     $.gulp.task('img:dev', () => {
-        return $.gulp.src('./dev/static/img/**/*.{png,jpg,gif}')
+        return $.gulp.src('./dev/static/img/**/*.{png,jpg,gif,mp4}')
             .pipe($.gulp.dest('./build/app/img/'));
     });
 

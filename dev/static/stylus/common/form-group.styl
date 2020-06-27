@@ -1,0 +1,50 @@
+.form-group
+  &+&
+    margin-top 20px
+  &.invalid
+    .form-group__input,
+    .select-field__active
+      border-color color-red
+
+.form-group__label
+  font-size 18px
+  line-height 125%
+  letter-spacing 0.8px
+  color gray-3
+  display block
+  margin-bottom 7px
+  cursor pointer
+  &--checkbox
+    display flex
+    justify-content space-between
+    max-width 350px
+  &--select
+    cursor default
+
+.form-group__input
+  background-color #fff
+  border 1px solid gray-5
+  box-sizing border-box
+  color gray-1
+  height 50px
+  padding 0 20px
+  display block
+  width 100%
+  &::placeholder
+    color gray-5
+  &:focus
+    border-color gray-1
+
+.form-group__checkbox
+  display none
+  &:checked + .checkbox-label
+    &:before
+      border-color gray-5
+      background-color gray-5
+    &:after
+      opacity 1
+  &:disabled + .checkbox-label
+    &:before
+      border-color #fff
+      background-color #fff
+

@@ -1,10 +1,17 @@
 .card-modal
   padding 45px 50px
   max-width 95%
+  @media (max-width breakpoint-llg)
+    max-width 100%
+    padding 45px 20px
+  @media (max-width breakpoint-md)
+    padding 0
 
 .card-modal__wrap
   display flex
   justify-content space-between
+  @media (max-width breakpoint-md)
+    display block
 
 @import './views.styl'
 @import './info.styl'

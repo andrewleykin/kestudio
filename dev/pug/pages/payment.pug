@@ -5,6 +5,12 @@ block variables
 
 block content
 	.payment-page
-		.container
-			h1(style="margin-bottom: 1em;") Страница находится в разработке
-			a(href="catalog.html") Каталог
+		p.payment-page__text Сформировать счет или оплатить услуги студии:
+		.payment-page__actions
+			button.btn.payment-page__btn(type="button") Оплата картой
+			button.btn.payment-page__btn(type="button") Сформировать счет для ЮЛ
+		.payment-page__tabs
+			.payment-page__tab
+				include ../section/payment/human
+			.payment-page__tab
+				include ../section/payment/organization

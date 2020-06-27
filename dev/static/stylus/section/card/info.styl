@@ -4,6 +4,11 @@
   flex auto
   position relative
   text-align left
+  @media (max-width breakpoint-llg)
+    margin-left 20px
+  @media (max-width breakpoint-md)
+    margin-left 0
+    padding 15px 20px 50px
 
 .card-info__close
   position absolute
@@ -18,6 +23,10 @@
   &:hover
     svg
       fill gray-3
+  @media (max-width breakpoint-md)
+    position fixed
+    top 10px
+    right 10px
 
 .card-info__legend
   font-weight 500
@@ -26,6 +35,8 @@
   letter-spacing 1.5px
   text-transform uppercase
   color gray-3
+  @media (max-width breakpoint-md)
+    color gray-4
 
 .card-info__name
   font-weight bold
@@ -36,11 +47,19 @@
   margin-bottom 25px
   @media (max-width breakpoint-xl)
     font-size 36px
+  @media (max-width breakpoint-lg)
+    max-width 80%
+  @media (max-width breakpoint-md)
+    color gray-2
 
 .card-info__header
   display flex
   align-items flex-end
   margin-bottom 50px
+  @media (max-width breakpoint-lg)
+    flex-wrap wrap
+  @media (max-width breakpoint-md)
+    flex-wrap nowrap
 
 .card-info__price
   margin-right 10px
@@ -50,6 +69,16 @@
     .card-info__price-num,
     .card-info__legend
       color color-red
+  @media (max-width breakpoint-llg)
+    max-width 144px
+    &.card-info__price--red
+      margin-right 10px
+  @media (max-width breakpoint-md)
+    margin-right 0
+    &.card-info__price--red
+      margin-right 0
+    &+&
+      margin-left 40px
 
 .card-info__price-num
   font-weight bold
@@ -59,11 +88,19 @@
   color gray-1
   margin-bottom 5px
   display block
+  @media (max-width breakpoint-md)
+    font-size 24px
+    color gray-4
+    font-weight normal
 
 .card-info__expirience
   display flex
   align-items flex-end
   margin-left auto
+  @media (max-width breakpoint-md)
+    position absolute
+    right 22px
+    top 30px
 
 .card-info__expirience-value
   font-size 18px
@@ -73,12 +110,17 @@
   display block
   margin-left 15px
   margin-bottom -3px
+  @media (max-width breakpoint-md)
+    font-size 14px
+    color gray-3
 
 .card-info__params
   display flex
   justify-content space-between
   margin-bottom 50px
   max-width 480px
+  @media (max-width breakpoint-md)
+    max-width 100%
 
 .card-info__params-block
   max-width 110px
@@ -87,6 +129,9 @@
     margin-left 10px
   .card-info__legend
     letter-spacing 1px
+  @media (max-width breakpoint-md)
+    .card-info__legend
+      letter-spacing 1.5px
 
 .card-info__params-value
   font-size 24px
@@ -94,15 +139,24 @@
   letter-spacing 1px
   color gray-1
   display block
+  @media (max-width breakpoint-md)
+    color gray-2
 
 .card-info__readiness
   margin-bottom 40px
   max-width 480px
+  @media (max-width breakpoint-md)
+    max-width 100%
+    margin-bottom 50px
 
 .card-info__readiness-wrap
   margin-top 25px
   display flex
   justify-content space-between
+  @media (max-width breakpoint-lg)
+    flex-wrap wrap
+  @media (max-width breakpoint-md)
+    display block
 
 .card-info__readiness-view
   width 100%
@@ -121,6 +175,9 @@
   line-height 120%
   letter-spacing 1px
   color gray-1
+  @media (max-width breakpoint-md)
+    font-weight normal
+    color gray-2
 
 .card-info__readiness-perc
   font-size 12px
@@ -128,11 +185,20 @@
   letter-spacing 1px
   color gray-3
   margin-left 10px
+  @media (max-width breakpoint-md)
+    color gray-4
 
 .card-info__readiness-params
   max-width 143px
   width 100%
   margin-left 10px
+  @media (max-width breakpoint-md)
+    margin-top 50px
+    margin-left 0
+    display flex
+    max-width 230px
+    .card-info__readiness-row
+      flex-direction column-reverse
 
 .card-info__readiness-value
   margin-left 10px
@@ -140,11 +206,17 @@
   line-height 120%
   letter-spacing 1px
   color gray-1
+  @media (max-width breakpoint-md)
+    margin-left 0
+    color gray-2
+    margin-bottom 5px
 
 .card-info__actions
   display flex
   justify-content space-between
   align-items flex-end
+  @media (max-width breakpoint-lg)
+    flex-wrap wrap
 
 .card-info__btn
   width 100%
@@ -159,3 +231,5 @@
   margin-bottom -5px
   &:hover
     color gray-1
+  @media (max-width breakpoint-md)
+    display none

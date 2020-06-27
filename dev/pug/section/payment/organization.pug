@@ -1,0 +1,39 @@
+form.payment-organization.form(data-validation)
+  .form__block
+    h5.form__subtitle.payment-organization__title Чтобы сформировать счет пожалуйста заполните форму.
+    .form-group
+      label.form-group__label(for="org-inn") ИНН
+      input.form-group__input(type="num" data-name="num" id="org-inn" placeholder="ИНН")
+    .form-group
+      label.form-group__label(for="org-bik") БИК
+      input.form-group__input(type="num" data-name="num" id="org-bik" placeholder="БИК")
+    .form-group
+      label.form-group__label(for="org-checking") Расчетный счет
+      input.form-group__input(type="num" data-name="num" id="org-checking" placeholder="Расчетный счет")
+    .form-group
+      label.form-group__label(for="org-name") Наименование компании  
+      input.form-group__input(type="text" data-name="text" id="org-name" placeholder="Наименование компании")
+    .form-group
+      label.form-group__label(for="org-kpp") КПП
+      input.form-group__input(type="num" data-name="num" id="org-kpp" placeholder="КПП")
+    .form-group
+      label.form-group__label(for="org-ogrn") ОГРН
+      input.form-group__input(type="num" data-name="num" id="org-ogrn" placeholder="ОГРН")
+    .form-group
+      label.form-group__label(for="org-bank-name") Наименование банка 
+      input.form-group__input(type="text" data-name="text" id="org-bank-name" placeholder="Наименование банка")
+    .form-group
+      label.form-group__label(for="org-bank-checking") Корр. счет банка
+      input.form-group__input(type="num" data-name="num" id="org-bank-checking" placeholder="Корр. счет банка")
+    .form-group
+      label.form-group__label(for="org-bank-checking") ИНН банка
+      input.form-group__input(type="num" data-name="num" id="org-bank-inn" placeholder="ИНН банка")
+  .form__block
+    .form-group
+      label.form-group__label(for="org-email") E-Mail
+      input.form-group__input(type="text" data-name="email" id="org-inn" placeholder="E-Mail")
+    .form-group.payment-organization__summ
+      label.form-group__label(for="org-summ") Сумма 
+      input.form-group__input(type="num" data-name="num" id="org-summ" placeholder="Введите сумму за услуги")
+  button.btn.btn--dark.payment-organization__btn(type="submit")
+    span check out

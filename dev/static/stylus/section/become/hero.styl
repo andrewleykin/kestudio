@@ -1,0 +1,43 @@
+.become-hero
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  margin-top -141px
+  padding-top 141px
+  height 100vh
+  min-height 812px
+  .container
+    height 100%
+  @media (max-width breakpoint-lg)
+    margin-top -121px
+    padding-top 121px
+  @media (max-width breakpoint-md)
+    margin-top 0
+    padding-top 0
+    height calc(100vh - 50px)
+    min-height 700px
+
+.become-hero__wrap
+  max-width 600px
+  height 100%
+  display flex
+  flex-direction column
+  justify-content center
+
+.become-hero__title
+  margin-bottom 85px
+  @media (max-width breakpoint-md)
+    margin-bottom 50px
+
+.become-hero__text
+  font-size 24px
+  line-height 120%
+  letter-spacing 1px
+  color #fff
+  margin-bottom 60px
+  @media (max-width breakpoint-md)
+    margin-bottom 40px
+    font-size 18px
+
+.become-hero__btn
+  max-width 330px

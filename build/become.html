@@ -36,9 +36,130 @@
         </header>
         <main class="main">
           <div class="become-page">
-            <div class="container">
-              <h1 style="margin-bottom: 1em;">Страница находится в разработке</h1><a href="catalog.html">Каталог</a>
-            </div>
+            <section class="become-hero" style="background-image: url('app/img/content/become.jpg')">
+              <div class="container">
+                <div class="become-hero__wrap">
+                  <h1 class="page-title page-title--white become-hero__title">Стань лицом бренда</h1>
+                  <p class="become-hero__text">Модели KazanExpress участвуют в съемках товаров для будущих крупных российских и международных брендов</p>
+                  <button class="become-hero__btn btn btn--white" type="buttton">Заполнить анкету</button>
+                </div>
+              </div>
+            </section>
+            <section class="become-info">
+              <div class="container">
+                <h3 class="title-h3 become-info__title">Сотрудничество с нами - это возможность стать лицом международной компании. </h3>
+                <div class="become-info__wrap">
+                  <p class="become-info__text">Ежедневно мы делаем тысячи снимков, которые видят десятки миллионов людей по всей стране. Уникальная система выбора модели и презентации обеспечит огромный опыт в сфере фото- и видеосъемок</p>
+                  <p class="become-info__accent">Стань лицом свежих брендов и будущих лидеров рынка - с командой профессионалов студии KazanExpress!</p>
+                </div>
+              </div>
+            </section>
+            <section class="become-form">
+              <div class="container">
+                <div class="become-form__wrap">
+                  <h4 class="become-form__title">Чтобы стать моделью Kazanexpress, пожалуйста заполните данные анкеты</h4><span class="become-form__required">Все поля обязательны к заполнению</span>
+                  <form class="become-form__form" data-validation>
+                    <div class="form__block">
+                      <div class="form-group">
+                        <label class="form-group__label" for="firstname">Имя</label>
+                        <input class="form-group__input" type="text" placeholder="Имя" id="firstname" data-name="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group__label" for="lastname">Фамилия</label>
+                        <input class="form-group__input" type="text" placeholder="Фамилия" id="lastname" data-name="text">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group__label" for="datepicker">Дата рождения</label>
+                        <input class="form-group__input" data-toggle="datepicker" placeholder="Дата рождения" id="datepicker" data-name="text">
+                      </div>
+                    </div>
+                    <div class="form__block">
+                      <h5 class="form__subtitle become-form__subtitle--params">Основные параметры внешности </h5>
+                      <div class="form-group">
+                        <label class="form-group__label" for="growth">Рост</label>
+                        <input class="form-group__input" type="text" placeholder="Рост" id="growth" data-name="num">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group__label form-group__label--select" for="size">Размер одежды</label>
+                        <div class="form-select select-field" data-placeholder="Размер одежды">
+                          <button class="select-field__close" type="button" aria-label="Очистить селект">
+                            <svg class="icon icon-close ">
+                              <use xlink:href="app/img/svg/symbol/sprite.svg#close"></use>
+                            </svg>
+                          </button>
+                          <button class="select-field__reset range-field__reset" type="button">сброс</button><span class="select-field__active">Размер одежды</span>
+                          <ul class="select-field__list">
+                            <li class="select-field__item">XXS</li>
+                            <li class="select-field__item">XS</li>
+                            <li class="select-field__item">S</li>
+                            <li class="select-field__item">M</li>
+                            <li class="select-field__item">L</li>
+                            <li class="select-field__item">XL</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group__label form-group__label--select" for="shoesize">Размер обуви</label>
+                        <div class="form-select select-field" data-placeholder="Размер одежды">
+                          <button class="select-field__close" type="button" aria-label="Очистить селект">
+                            <svg class="icon icon-close ">
+                              <use xlink:href="app/img/svg/symbol/sprite.svg#close"></use>
+                            </svg>
+                          </button>
+                          <button class="select-field__reset range-field__reset" type="button">сброс</button><span class="select-field__active">Размер одежды</span>
+                          <ul class="select-field__list">
+                            <li class="select-field__item">XXS</li>
+                            <li class="select-field__item">XS</li>
+                            <li class="select-field__item">S</li>
+                            <li class="select-field__item">M</li>
+                            <li class="select-field__item">L</li>
+                            <li class="select-field__item">XL</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group__label" for="girth">Обхват бедер</label>
+                        <input class="form-group__input" type="text" placeholder="Обхват бедер" id="girth" data-name="num">
+                      </div>
+                    </div>
+                    <div class="form__block">
+                      <h5 class="form__subtitle become-form__subtitle--agreement">Согласие на фотосессию*</h5><span class="become-form__required become-form__required--comment">*за съемку в категориях устанавливается доплата в размерах 20% и 30% от стоимости за час</span>
+                      <div class="form-group">
+                        <input class="form-group__checkbox" type="checkbox" id="checkbox-1">
+                        <label class="form-group__label form-group__label--checkbox checkbox-label" for="checkbox-1"><span>В белье</span><span>+20%</span></label>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-group__checkbox" type="checkbox" id="checkbox-2">
+                        <label class="form-group__label form-group__label--checkbox checkbox-label" for="checkbox-2"><span>В купальнике</span><span>+20%</span></label>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-group__checkbox" type="checkbox" id="checkbox-3">
+                        <label class="form-group__label form-group__label--checkbox checkbox-label" for="checkbox-3"><span>Товары для взрослых</span><span>+30%</span></label>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-group__checkbox" type="checkbox" id="checkbox-4">
+                        <label class="form-group__label form-group__label--checkbox checkbox-label" for="checkbox-4"><span>Товары для беременных</span><span>+20%</span></label>
+                      </div>
+                    </div>
+                    <div class="form__block">
+                      <div class="form-group">
+                        <label class="form-group__label" for="phone">Номер телефона</label>
+                        <input class="form-group__input" data-phone type="text" placeholder="+7 (___) ___ __ __" id="phone" data-name="phone">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group__label" for="instagram">Аккаунт Instagram </label>
+                        <input class="form-group__input" type="text" placeholder="@instagram" id="instagram" data-name="text">
+                      </div>
+                    </div>
+                    <button class="btn btn--dark become-form__btn" type="submit"><span>Отправить анкету</span></button>
+                    <div class="become-form__agreement form-group">
+                      <input class="form-group__checkbox" type="checkbox" id="checkbox-5" checked disabled>
+                      <label class="form-group__label form-group__label--checkbox checkbox-label" for="checkbox-5">Согласие на обработку персональных данных</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
           </div>
         </main>
         <footer class="footer">

@@ -7,15 +7,23 @@
   letter-spacing 2px
   text-transform uppercase
   color gray-1
-  padding 20px 80px
+  padding 20px 0
   border 2px solid gray-4
   border-radius 10px
   transition all .2s
   background-color transparent
+  &.active,
   &:hover
     border-color gray-2
   &:active
     border-color gray-3
+  &--white
+    border-color #fff
+    color #fff
+  &--dark
+    border-color gray-2
+    &:hover
+      border-color gray-1
   @media (max-width breakpoint-md)
     font-size 14px
     line-height 14px

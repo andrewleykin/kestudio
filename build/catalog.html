@@ -69,6 +69,11 @@
                       </div>
                       <div class="catalog-filters__item">
                         <div class="select-field" data-range="true" data-placeholder="Возраст">
+                          <button class="select-field__close" type="button" aria-label="Очистить селект">
+                            <svg class="icon icon-close ">
+                              <use xlink:href="app/img/svg/symbol/sprite.svg#close"></use>
+                            </svg>
+                          </button>
                           <button class="range-field__reset mobile" type="button">сброс</button><span class="select-field__active">Возраст</span>
                           <div class="range-field select-field__list">
                             <div class="range-field__info">
@@ -93,22 +98,22 @@
                           </button>
                           <button class="select-field__reset range-field__reset" type="button">сброс</button><span class="select-field__active">Размер одежды</span>
                           <div class="select-field__list">
-                            <label class="select-field__item">XXS
+                            <label class="select-field__item checkbox-label">XXS
                               <input type="checkbox">
                             </label>
-                            <label class="select-field__item">XS
+                            <label class="select-field__item checkbox-label">XS
                               <input type="checkbox">
                             </label>
-                            <label class="select-field__item">S
+                            <label class="select-field__item checkbox-label">S
                               <input type="checkbox">
                             </label>
-                            <label class="select-field__item">M
+                            <label class="select-field__item checkbox-label">M
                               <input type="checkbox">
                             </label>
-                            <label class="select-field__item">L
+                            <label class="select-field__item checkbox-label">L
                               <input type="checkbox">
                             </label>
-                            <label class="select-field__item">XL
+                            <label class="select-field__item checkbox-label">XL
                               <input type="checkbox">
                             </label>
                           </div>
@@ -231,7 +236,7 @@
                               </svg><span>Видео</span>
                             </button>
                           </div>
-                          <div class="card-views__display">
+                          <div class="card-views__display"><span class="card-views__display-text">агентство: kestudio</span>
                             <button class="card-views__display-arrow prev" type="button" aria-label="Предыдущее фото">
                               <svg class="icon icon-arrow-left ">
                                 <use xlink:href="app/img/svg/symbol/sprite.svg#arrow-left"></use>
@@ -248,6 +253,9 @@
                               <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 3"></div>
                               <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 4"></div>
                               <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 5"></div>
+                            </div>
+                            <div class="card-views__display-video">
+                              <video src="app/img/content/videoplayback.mp4" controls></video>
                             </div>
                           </div>
                         </div>
