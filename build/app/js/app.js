@@ -303,6 +303,14 @@
 		$(document).on('opened', '.remodal', function (e) {
 			initSlider()
 		});
+
+		$(document).on('closed', '.remodal', function (e) {
+			$('.card-views__display-video').each((index, item) => {
+				$(item).removeClass('active')
+				$(item).find('video').get(0).pause()
+				$(item).find('video').get(0).currentTime = 0
+			})
+		});
 	}
 
 	if ($('[data-toggle="datepicker"]').length) {

@@ -139,6 +139,7 @@ textarea {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   background-color: transparent;
+  min-width: 300px;
 }
 
 .btn.active,
@@ -1167,7 +1168,6 @@ textarea {
 }
 
 .become-form__btn {
-  width: 100%;
   max-width: 300px;
   margin-top: 80px;
   margin-bottom: 20px;
@@ -1260,8 +1260,6 @@ textarea {
 }
 
 .payment-organization__btn {
-  width: 100%;
-  max-width: 300px;
   margin: 50px auto 0;
 }
 
@@ -1807,7 +1805,6 @@ textarea {
     font-size: 0.875rem;
     line-height: 0.875rem;
     padding: 19px 0;
-    width: 100%;
   }
 
   .menu {
@@ -2439,6 +2436,7 @@ textarea {
     position: fixed;
     top: 10px;
     right: 10px;
+    z-index: 100;
   }
 
   .card-info__legend {
