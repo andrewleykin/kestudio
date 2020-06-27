@@ -85,13 +85,6 @@
 		});
 	}
 
-	if ($('.catalog-page').length) {
-		$('.catalog-list__blocks').on('click', '.catalog-list-block', function(e) {
-			const remodal = $(`[data-remodal-id=${$(e.currentTarget).data('name')}]`).remodal()
-      remodal.open()
-		});
-	}
-
 	if ($('.select-field').length) {
 		const selects = $('.select-field');
 
@@ -234,8 +227,8 @@
 	}
 
 	if ($('.card-views').length) {
-		const initSlider = () => {
-			const openModal = $('.remodal').filter('.remodal-is-opened')
+		const initSlider = (slug) => {
+			const openModal = $(`[data-remodal-id=${slug}]`)
 			const arrows = openModal.find('.card-views__display-arrow')
 			const thumbEl = openModal.find('.card-views__thumbs-slider')
 			const displayEl = openModal.find('.card-views__display-slider')
@@ -250,35 +243,39 @@
 				videoEl.get(0).currentTime = 0
 			}
 
-			thumbEl.slick({
-				vertical: true,
-				slidesToShow: 4,
-				slidesToScroll: 1,
-				arrows: false,
-				asNavFor: displayEl,
-				focusOnSelect: true,
-				infinity: true,
-				responsive: [
-					{
-						breakpoint: 768,
-						settings: {
-							slidesToShow: 4,
-							slidesToScroll: 1,
-							vertical: false,
-							variableWidth: true,
-							centerMode: true
-						}
-					},
-				]
-			})
-	
-			displayEl.slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				asNavFor: thumbEl,
-				infinity: true,
-				arrows: false
-			})
+			if (!thumbEl.hasClass('slick-initialized')) {
+				thumbEl.slick({
+					vertical: true,
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					arrows: false,
+					asNavFor: displayEl,
+					focusOnSelect: true,
+					infinity: true,
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow: 4,
+								slidesToScroll: 1,
+								vertical: false,
+								variableWidth: true,
+								centerMode: true
+							}
+						},
+					]
+				})
+			}
+
+			if (!displayEl.hasClass('slick-initialized')) {
+				displayEl.slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					asNavFor: thumbEl,
+					infinity: true,
+					arrows: false
+				})
+			}
 	
 			arrows.click(function(){
 				$(displayEl).slick($(this).hasClass('prev') ? 'slickPrev' : 'slickNext')
@@ -307,8 +304,11 @@
 			})
 		}
 
-		$(document).on('opened', '.remodal', function (e) {
-			initSlider()
+		$('.catalog-list__blocks').on('click', '.catalog-list-block', function(e) {
+			const slug = $(e.currentTarget).data('name')
+			const remodal = $(`[data-remodal-id=${slug}]`).remodal()
+			remodal.open()
+			initSlider(slug)
 		});
 
 		$(document).on('closed', '.remodal', function (e) {
