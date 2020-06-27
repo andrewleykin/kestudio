@@ -85,6 +85,13 @@
 		});
 	}
 
+	if ($('.catalog-page').length) {
+		$('.catalog-list__blocks').on('click', '.catalog-list-block', function(e) {
+			const remodal = $(`[data-remodal-id=${$(e.currentTarget).data('name')}]`).remodal()
+      remodal.open()
+		});
+	}
+
 	if ($('.select-field').length) {
 		const selects = $('.select-field');
 
