@@ -226,7 +226,7 @@
 		});
 	}
 
-	if ($('.card-views').length) {
+	if ($('.catalog-list__blocks').length) {
 		const initSlider = (slug) => {
 			const openModal = $(`[data-remodal-id=${slug}]`)
 			const arrows = openModal.find('.card-views__display-arrow')
