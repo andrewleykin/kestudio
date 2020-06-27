@@ -226,7 +226,13 @@
 		});
 	}
 
-	if ($('.catalog-list__blocks').length) {
+	if ($('.catalog-list').length) {
+		const closeVideo = (videoBlock) => {
+			$(videoBlock).removeClass('active')
+			$(videoBlock).find('video').get(0).pause()
+			$(videoBlock).find('video').get(0).currentTime = 0
+		}
+
 		const initSlider = (slug) => {
 			const openModal = $(`[data-remodal-id=${slug}]`)
 			const arrows = openModal.find('.card-views__display-arrow')
@@ -236,12 +242,6 @@
 			const videoBlock = openModal.find('.card-views__display-video')
 			const videoEl = videoBlock.find('video')
 			let videoShow = 0
-
-			const closeVideo = () => {
-				videoBlock.removeClass('active')
-				videoEl.get(0).pause()
-				videoEl.get(0).currentTime = 0
-			}
 
 			if (!thumbEl.hasClass('slick-initialized')) {
 				thumbEl.slick({
@@ -283,7 +283,7 @@
 
 			thumbEl.on('beforeChange', function() {
 				if (videoBlock.hasClass('active')) {
-					closeVideo()
+					closeVideo(videoBlock)
 				}
 			});
 
@@ -296,7 +296,7 @@
 				videoShow++
 				
 				if (videoShow > 1) {
-					closeVideo()
+					closeVideo(videoBlock)
 					return
 				}
 
@@ -304,7 +304,7 @@
 			})
 		}
 
-		$('.catalog-list__blocks').on('click', '.catalog-list-block', function(e) {
+		$('.catalog-list').on('click', '.catalog-list-block', function(e) {
 			const slug = $(e.currentTarget).data('name')
 			const remodal = $(`[data-remodal-id=${slug}]`).remodal()
 			remodal.open()
@@ -313,9 +313,7 @@
 
 		$(document).on('closed', '.remodal', function (e) {
 			$('.card-views__display-video').each((index, item) => {
-				$(item).removeClass('active')
-				$(item).find('video').get(0).pause()
-				$(item).find('video').get(0).currentTime = 0
+				closeVideo(item)
 			})
 		});
 	}
