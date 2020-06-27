@@ -1957,6 +1957,10 @@ textarea {
     font-size: 1.5rem;
   }
 
+  .checkbox-label {
+    padding-left: 40px;
+  }
+
   .form-select.active .select-field__close {
     display: block;
   }
@@ -2327,6 +2331,14 @@ textarea {
 
   .payment-page__tabs {
     padding-top: 50px;
+  }
+
+  .payment-organization {
+    padding: 0 16px;
+  }
+
+  .payment-organization__title {
+    margin-bottom: 50px;
   }
 
   .card-modal {

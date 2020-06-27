@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Главная</title>
+    <title>Оплата</title>
     <meta http-equiv="X-UA-Compatible" content="IE = edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -35,13 +35,78 @@
           </div>
         </header>
         <main class="main">
-          <div class="index-page">
-            <div class="container">
-              <h1 style="margin-bottom: 1em;">Страница находится в разработке</h1>
-              <p><a href="catalog.html">Каталог</a></p>
-              <p><a href="payment.html">Оплата</a></p>
-              <p><a href="thanks.html">Благодарность за оплату</a></p>
-              <p><a href="404.html">404 страница</a></p>
+          <div class="payment-page">
+            <p class="payment-page__text">Сформировать счет или оплатить услуги студии:</p>
+            <div class="payment-page__actions">
+              <button class="btn payment-page__btn" type="button">Оплата картой</button>
+              <button class="btn payment-page__btn" type="button">Сформировать счет для ЮЛ</button>
+            </div>
+            <div class="payment-page__tabs">
+              <div class="payment-page__tab">
+                <form class="payment-human form" data-validation>
+                  <div class="form__block">
+                    <h5 class="form__subtitle payment-human__title">Введите сумму</h5>
+                    <div class="form-group">
+                      <input class="form-group__input" type="num" data-name="num" placeholder="Введите сумму за услуги">
+                    </div>
+                  </div>
+                  <button class="btn btn--dark payment-human__btn" type="submit"><span>check out</span></button>
+                </form>
+              </div>
+              <div class="payment-page__tab">
+                <form class="payment-organization form" data-validation>
+                  <div class="form__block">
+                    <h5 class="form__subtitle payment-organization__title">Чтобы сформировать счет пожалуйста заполните форму.</h5>
+                    <div class="form-group">
+                      <label class="form-group__label" for="org-inn">ИНН</label>
+                      <input class="form-group__input" type="num" data-name="num" id="org-inn" placeholder="ИНН">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-group__label" for="org-bik">БИК</label>
+                      <input class="form-group__input" type="num" data-name="num" id="org-bik" placeholder="БИК">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-group__label" for="org-checking">Расчетный счет</label>
+                      <input class="form-group__input" type="num" data-name="num" id="org-checking" placeholder="Расчетный счет">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-group__label" for="org-name">Наименование компании  </label>
+                      <input class="form-group__input" type="text" data-name="text" id="org-name" placeholder="Наименование компании">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-group__label" for="org-kpp">КПП</label>
+                      <input class="form-group__input" type="num" data-name="num" id="org-kpp" placeholder="КПП">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-group__label" for="org-ogrn">ОГРН</label>
+                      <input class="form-group__input" type="num" data-name="num" id="org-ogrn" placeholder="ОГРН">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-group__label" for="org-bank-name">Наименование банка </label>
+                      <input class="form-group__input" type="text" data-name="text" id="org-bank-name" placeholder="Наименование банка">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-group__label" for="org-bank-checking">Корр. счет банка</label>
+                      <input class="form-group__input" type="num" data-name="num" id="org-bank-checking" placeholder="Корр. счет банка">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-group__label" for="org-bank-checking">ИНН банка</label>
+                      <input class="form-group__input" type="num" data-name="num" id="org-bank-inn" placeholder="ИНН банка">
+                    </div>
+                  </div>
+                  <div class="form__block">
+                    <div class="form-group">
+                      <label class="form-group__label" for="org-email">E-Mail</label>
+                      <input class="form-group__input" type="text" data-name="email" id="org-inn" placeholder="E-Mail">
+                    </div>
+                    <div class="form-group payment-organization__summ">
+                      <label class="form-group__label" for="org-summ">Сумма </label>
+                      <input class="form-group__input" type="num" data-name="num" id="org-summ" placeholder="Введите сумму за услуги">
+                    </div>
+                  </div>
+                  <button class="btn btn--dark payment-organization__btn" type="submit"><span>check out</span></button>
+                </form>
+              </div>
             </div>
           </div>
         </main>

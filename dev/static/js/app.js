@@ -38,10 +38,11 @@
 		}
 
 		const closeForm = () => {
+			clearField()
 			form.removeClass(activeClass)
 			$('body').removeClass('overflow-hidden')
 			$('.header__burger').removeClass('hidden')
-			clearField()
+			$('.catalog-filters__form-reset').hide()
 		}
 
 		$('.catalog-filters__btn').click((e) => {
