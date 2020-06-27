@@ -410,32 +410,21 @@ $(document).ready(function () {
 				})
 
 		    submit.on('click', function (e) {
-		        var mass = [];
 
-		        for (var i = 0; i < inputs.length; i++) {
+					inputs.each((index, item) => {
+						if ($(item).data('name')) checkValidity(item)
+						if ($(item).parent().hasClass('invalid')) stopSubmitIndex++;
+					})
 
-		            var input = inputs[i];
-		            mass.push(input);
+					if (selects.length) {
+						selects.each((index, item) => {
+							checkSelect(item)
+						})
+					}
 
-		            if (input.checkValidity() == true) {
-									var elm = input;
-									checkValidity(elm);
-		            }
-
-		            if ($(input).parent().hasClass('invalid')) {
-									stopSubmitIndex++;
-								}
-						}
-
-						if (selects.length) {
-							selects.each((index, item) => {
-								checkSelect(item)
-							})
-						}
-
-		        if (stopSubmitIndex > 0) {
-		            e.preventDefault();
-		        }
+					if (stopSubmitIndex > 0) {
+						e.preventDefault();
+					}
 		    });
 		});
 	}
