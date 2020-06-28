@@ -33,7 +33,8 @@
 				});
 				
 		    validator.on('change keyup', 'input[data-name]', function () {
-		        var elm = $(this);
+						var elm = $(this);
+						if (elm.val().trim() === '₽') elm.val('')
 		        checkValidity(elm);
 				});
 				

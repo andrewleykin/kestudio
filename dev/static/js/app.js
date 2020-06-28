@@ -349,4 +349,8 @@
 			$('.payment-page__tab').eq($(e.target).index()).addClass('active').siblings().removeClass('active')
 		})
 	}
+
+	if ($('[data-summ]').length) {
+		$('[data-summ]').mask("# ##0 ₽", {reverse: true});
+	}
 })();
