@@ -372,6 +372,13 @@
 			window.location = scrollEl.length ? `${window.location.pathname}${id}` : `/${id}`
 		});
 	}
+
+	const pathname = window.location.pathname.slice(1)
+	const whitePages = ['become.html']
+
+	if (pathname === '' || whitePages.includes(pathname)) {
+		$('.header').addClass('header--white')
+	}
 })();
 $(document).ready(function () {
     svg4everybody({});

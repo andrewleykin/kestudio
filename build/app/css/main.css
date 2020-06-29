@@ -709,6 +709,18 @@ textarea {
   background-color: rgba(51,51,51,0.5);
 }
 
+.header--white .header__logo svg {
+  fill: #fff;
+}
+
+.header--white .header__logo svg path.arrow {
+  fill: #333;
+}
+
+.header--white .menu__link {
+  color: #fff;
+}
+
 .header__burger {
   cursor: pointer;
   display: none;
@@ -2187,7 +2199,7 @@ textarea {
 
   .header__menu {
     position: fixed;
-    top: -100%;
+    top: -110%;
     left: 0;
     right: 0;
     -webkit-transition: all 0.4s;

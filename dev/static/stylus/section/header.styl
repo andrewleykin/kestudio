@@ -11,6 +11,14 @@
     bottom 0
     z-index -1
     background-color rgba(gray-1, .5)
+  &--white
+    .header__logo
+      svg
+        fill white
+        path.arrow
+          fill gray-1
+    .menu__link
+      color #fff
   @media (max-width breakpoint-md)
     padding-top 0
     background-color gray-1
@@ -104,7 +112,7 @@
 .header__menu
   @media (max-width breakpoint-md)
     position fixed
-    top -100%
+    top -110%
     left 0
     right 0
     transition all .4s
