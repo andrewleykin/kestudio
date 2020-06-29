@@ -496,6 +496,10 @@ textarea {
   border-color: #333;
 }
 
+.form-group__input[data-summ] {
+  font-family: -apple-system, 'Roboto', Arial, sans-serif;
+}
+
 .form-group__checkbox {
   display: none;
 }
