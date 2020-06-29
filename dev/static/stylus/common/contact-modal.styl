@@ -1,0 +1,59 @@
+.contact-modal
+  max-width 90%
+  text-align left
+  padding 60px
+  @media(max-width breakpoint-md)
+    max-width 100%
+    padding 50px 10px 30px
+
+.contact-modal__wrap
+  display flex
+  justify-content space-between
+  @media(max-width breakpoint-md)
+    display block
+
+.contact-modal__info
+  max-width 410px
+  margin-right 10px
+  @media(max-width breakpoint-md)
+    max-width 100%
+    margin-right 0
+    margin-bottom 30px
+
+.contact-modal__info-legend
+  font-weight 500
+  font-size 24px
+  line-height 120%
+  letter-spacing 1.2px
+  color gray-2
+  display block
+  margin-bottom 25px
+  @media(max-width breakpoint-md)
+    font-size 16px
+    margin-bottom 20px
+
+.contact-modal__info-title
+  font-weight bold
+  font-size 36px
+  line-height 120%
+  letter-spacing 1px
+  color gray-2
+  &--address
+    margin-bottom 90px
+  &--telegramm
+    margin-bottom 70px
+  @media(max-width breakpoint-md)
+    font-size 24px
+    &--address,
+    &--telegramm
+      margin-bottom 40px
+
+.contact-modal__info-btn
+  max-width 300px
+
+.contact-modal__map
+  max-width 600px
+  width 100%
+  @media(max-width breakpoint-md)
+    min-height 300px
+    margin 0 auto

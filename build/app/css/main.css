@@ -188,6 +188,8 @@ textarea {
   letter-spacing: 0.01em;
   color: #333;
   padding: 20px;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .menu__link:hover,
@@ -611,6 +613,81 @@ textarea {
   line-height: 120%;
   letter-spacing: 0.0625rem;
   color: #4f4f4f;
+}
+
+.contact-modal {
+  max-width: 90%;
+  text-align: left;
+  padding: 60px;
+}
+
+.contact-modal__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contact-modal__info {
+  max-width: 410px;
+  margin-right: 10px;
+}
+
+.contact-modal__info-legend {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 120%;
+  letter-spacing: 0.075rem;
+  color: #4f4f4f;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.contact-modal__info-title {
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 120%;
+  letter-spacing: 0.0625rem;
+  color: #4f4f4f;
+}
+
+.contact-modal__info-title--address {
+  margin-bottom: 90px;
+}
+
+.contact-modal__info-title--telegramm {
+  margin-bottom: 70px;
+}
+
+.contact-modal__info-btn {
+  max-width: 300px;
+}
+
+.contact-modal__map {
+  max-width: 600px;
+  width: 100%;
+}
+
+.modal-close {
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  top: 15px;
+  right: 15px;
+}
+
+.modal-close svg {
+  width: 50px;
+  height: 50px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.modal-close:hover svg {
+  fill: #828282;
 }
 
 /* Стили секции header */
@@ -1492,23 +1569,8 @@ textarea {
 }
 
 .card-info__close {
-  position: absolute;
   top: 0;
   right: 0;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.card-info__close svg {
-  width: 50px;
-  height: 50px;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.card-info__close:hover svg {
-  fill: #828282;
 }
 
 .card-info__legend {
@@ -1834,6 +1896,7 @@ textarea {
     height: 56px;
     background-color: #333;
     color: #fff;
+    width: 100%;
   }
 
   .menu__link:hover,
@@ -1998,6 +2061,45 @@ textarea {
 
   .form__subtitle {
     font-size: 1.125rem;
+  }
+
+  .contact-modal {
+    max-width: 100%;
+    padding: 50px 10px 30px;
+  }
+
+  .contact-modal__wrap {
+    display: block;
+  }
+
+  .contact-modal__info {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .contact-modal__info-legend {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-modal__info-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-modal__info-title--address,
+  .contact-modal__info-title--telegramm {
+    margin-bottom: 40px;
+  }
+
+  .contact-modal__map {
+    min-height: 300px;
+    margin: 0 auto;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
   }
 
   .header {

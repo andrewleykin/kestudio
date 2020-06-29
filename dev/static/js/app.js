@@ -359,11 +359,17 @@
 	}
 
 	if ($('.js-scroll-to').length) {
-		$('.js-scroll-to').on("click", function(){  
-			$('html, body').stop().animate({
-					scrollTop: $( $(this).attr('href') ).offset().top
-			}, 400);
-			return false;
+		$('.js-scroll-to').on("click", function(e){
+			e.preventDefault()
+			const id = $(this).attr('href')
+			const scrollEl = $(id)
+			if (scrollEl.length) {
+				$('html, body').stop().animate({
+					scrollTop: scrollEl.offset().top
+				}, 400);
+			}
+
+			window.location = scrollEl.length ? `${window.location.pathname}${id}` : `/${id}`
 		});
 	}
 })();
