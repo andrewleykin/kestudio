@@ -2,12 +2,13 @@
   padding-top 100px
   margin-bottom 200px
   @media (max-width breakpoint-md)
-    padding-top 50px
-    margin-bottom 100px
+    margin-bottom 50px
 
 .become-info__title
-  margin-bottom 25px
+  margin-bottom 50px
   max-width 825px
+  @media (max-width breakpoint-md)
+    margin-bottom 25px
 
 .become-info__wrap
   max-width 900px
@@ -15,22 +16,26 @@
 
 .become-info__text
   max-width 350px
-  font-size 18px
+  font-size 16px
   line-height 125%
   letter-spacing 0.8px
   color gray-2
-  margin-bottom 120px
+  margin-bottom 220px
   @media (max-width breakpoint-md)
-    margin-bottom 60px
+    margin-bottom 100px
+    font-size 20px
+    letter-spacing 1.2px
 
 .become-info__accent
   font-weight bold
   font-size 36px
   line-height 120%
   letter-spacing 1px
-  color #fff
-  padding 78px 90px
-  background-color color-red
+  color gray-2
+  max-width 720px
   @media (max-width breakpoint-md)
-    padding 40px 50px
-    font-size 24px
+    color #fff
+    background-color gray-2
+    padding 120px 20px 150px
+    width calc(100% + 20px)
+    margin-left -10px

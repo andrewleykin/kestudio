@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.woff2") format('woff2'), url("../fonts/Roboto-Regular.woff") format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -8,8 +8,16 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/Roboto-Medium.eot");
+  src: url("../fonts/Roboto-Medium.woff2") format('woff2'), url("../fonts/Roboto-Medium.woff") format('woff');
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Bold.woff2") format('woff2'), url("../fonts/Roboto-Bold.woff") format('woff');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
@@ -1100,7 +1108,7 @@ textarea {
 }
 
 .become-info__title {
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   max-width: 825px;
 }
 
@@ -1111,11 +1119,11 @@ textarea {
 
 .become-info__text {
   max-width: 350px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 125%;
   letter-spacing: 0.05rem;
   color: #4f4f4f;
-  margin-bottom: 120px;
+  margin-bottom: 220px;
 }
 
 .become-info__accent {
@@ -1123,9 +1131,8 @@ textarea {
   font-size: 2.25rem;
   line-height: 120%;
   letter-spacing: 0.0625rem;
-  color: #fff;
-  padding: 78px 90px;
-  background-color: #eb5757;
+  color: #4f4f4f;
+  max-width: 720px;
 }
 
 .become-form__wrap {
@@ -1953,10 +1960,6 @@ textarea {
     font-size: 2.25rem;
   }
 
-  .title-h3 {
-    font-size: 1.5rem;
-  }
-
   .checkbox-label {
     padding-left: 40px;
   }
@@ -2265,7 +2268,8 @@ textarea {
   }
 
   .become-page {
-    padding-bottom: 35px;
+    padding-bottom: 40px;
+    background-color: #fff;
   }
 
   .become-hero {
@@ -2280,22 +2284,31 @@ textarea {
   }
 
   .become-hero__text {
-    margin-bottom: 40px;
-    font-size: 1.125rem;
+    margin-bottom: 130px;
+    font-size: 1.25rem;
+    max-width: 70%;
   }
 
   .become-info {
-    padding-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+  }
+
+  .become-info__title {
+    margin-bottom: 25px;
   }
 
   .become-info__text {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
+    font-size: 1.25rem;
+    letter-spacing: 0.075rem;
   }
 
   .become-info__accent {
-    padding: 40px 50px;
-    font-size: 1.5rem;
+    color: #fff;
+    background-color: #4f4f4f;
+    padding: 120px 20px 150px;
+    width: calc(100% + 20px);
+    margin-left: -10px;
   }
 
   .become-form__form {

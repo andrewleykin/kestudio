@@ -353,4 +353,17 @@
 	if ($('[data-summ]').length) {
 		$('[data-summ]').mask("# ##0 ₽", {reverse: true});
 	}
+
+	if ($('[data-date]').length) {
+		$('[data-date]').mask("##.##.####");
+	}
+
+	if ($('.js-scroll-to').length) {
+		$('.js-scroll-to').on("click", function(){  
+			$('html, body').stop().animate({
+					scrollTop: $( $(this).attr('href') ).offset().top
+			}, 400);
+			return false;
+		});
+	}
 })();
