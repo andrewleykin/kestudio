@@ -52,17 +52,151 @@
         </header>
         <main class="main">
           <div class="index-page">
-            <div class="container">
-              <h1 class="page-title" style="margin-bottom: 1em;">Страница находится в разработке</h1>
-              <p style="margin-bottom: 1em;"><a href="catalog.html">Каталог</a></p>
-              <p style="margin-bottom: 1em;"><a href="payment.html">Оплата</a></p>
-              <p style="margin-bottom: 1em;"><a href="thanks.html">Благодарность за оплату</a></p>
-              <p style="margin-bottom: 1em;"><a href="404.html">404 страница</a></p>
-              <p style="margin-bottom: 1em;"><a href="become.html">Стать моделью</a></p>
-              <section id="hero" style="height: 100vh;">section hero</section>
-              <section id="about" style="height: 100vh;">section about</section>
-              <section id="services" style="height: 100vh;">section services</section>
-            </div>
+            <section class="index-hero hero-background">
+              <div class="index-hero__video">
+                <video src="app/img/content/videoplayback.mp4" muted autoplay loop></video>
+              </div>
+              <div class="container">
+                <div class="index-hero__wrap">
+                  <h1 class="page-title page-title--white index-hero__title">Студия KazanExpress — выходи на новый уровень</h1>
+                </div>
+              </div>
+            </section>
+            <section class="index-about" id="about">
+              <div class="container">
+                <div class="index-about__info wow fadeIn">
+                  <h2 class="title-h3 index-about__info-title">Наш результат - преимущество товара в каждом кадре</h2>
+                  <div class="index-about__info-block">
+                    <p class="index-about__text index-about__info-text">Команда студии постояно растет и включает в себя самых талантливых и перспективных специалистов из разных областей</p>
+                    <div class="index-about__info-image"><img src="app/img/content/index-info.jpg" alt="Картинка о компании"></div>
+                  </div>
+                </div>
+                <div class="index-about__block wow fadeIn">
+                  <div class="index-about__block-images">
+                    <div class="index-about__block-image"><img src="app/img/content/index-block-1.jpg" alt="Пример продукта 1"></div>
+                    <div class="index-about__block-image"><img src="app/img/content/index-block-2.jpg" alt="Пример продукта 2"></div>
+                  </div>
+                  <p class="index-about__text index-about__block-text">Мы предоставляем качественные и креативные снимки, вызывая у клиента желание оформить заказ</p>
+                </div>
+                <div class="index-about__block wow fadeIn">
+                  <div class="index-about__block-images">
+                    <div class="index-about__block-image"><img src="app/img/content/index-block-2.jpg" alt="Пример продукта 3"></div>
+                    <div class="index-about__block-image"><img src="app/img/content/index-block-1.jpg" alt="Пример продукта 4"></div>
+                  </div>
+                  <p class="index-about__text index-about__block-text">Каждую неделю мы пополняем базу моделей, которые смогут грамотно и выгодно представить ваш продукт на маркетплейсе, выделяя его среди конкурентов</p>
+                </div>
+              </div>
+              <div class="index-about__footer-image"><img src="app/img/content/index-about-footer.jpg" alt="Картинка о компании"></div>
+            </section>
+            <section class="index-advantages">
+              <div class="container">
+                <div class="index-advantages__wrap wow fadeIn">
+                  <h2 class="title-h3 index-advantages__title">К услугам  наших продавцов:</h2>
+                  <div class="index-advantages__row">
+                    <ul class="index-advantages__info">
+                      <li class="index-advantages__info-item">Семь рабочих зон для проведения съемок любой сложности</li>
+                      <li class="index-advantages__info-item">Широкий ассортимент аксессуаров и нарядов</li>
+                      <li class="index-advantages__info-item">Одно из лучших профессиональных оборудований в стране</li>
+                      <li class="index-advantages__info-item">Технология съемки товара 360 градусов </li>
+                    </ul>
+                    <div class="index-advantages__images">
+                      <div class="index-advantages__images-row">
+                        <div class="index-advantages__image big"><img src="app/img/content/index-advantages-1.jpg" alt="Картинка преимущество 1"></div>
+                        <div class="index-advantages__image small"></div><img src="app/img/content/index-advantages-2.jpg" alt="Картинка преимущество 2">
+                      </div>
+                      <div class="index-advantages__images-row index-advantages__images-row--center">
+                        <div class="index-advantages__image big"><img src="app/img/content/index-advantages-3.jpg" alt="Картинка преимущество 3"></div>
+                      </div>
+                      <div class="index-advantages__images-row">
+                        <div class="index-advantages__image small"><img src="app/img/content/index-advantages-4.jpg" alt="Картинка преимущество 4"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="index-advantages__block wow fadeIn">
+                  <div class="index-advantages__block-image"><img src="app/img/content/index-advantages-block.jpg" alt="Картинка о преимуществах"></div>
+                  <p class="index-advantages__block-text">Сохраняя потрясающий уровень качества, наши цены в 5-10 раз ниже любой профессиональной студии. В этом заключается наш подход к партнерам, который не имеет аналогов среди российских маркетплейсов.</p>
+                </div>
+              </div>
+            </section>
+            <section class="index-services" id="services">
+              <div class="container">
+                <h2 class="page-title index-services__title">Услуги студии KazanExpress</h2>
+                <div class="index-services__block index-services__block--main wow fadeIn">
+                  <h3 class="title-h3 index-services__block-title">Съемка товара</h3>
+                  <p class="index-services__block-subtitle">Искусство представить продукт, товар или объект максимально эффектно и красиво, подчеркнуть его особенности и конкурентные преимущества, сделать максимально привлекательными для покупателя.</p>
+                  <div class="index-services__block-row">
+                    <div class="index-services__block-info">
+                      <p class="index-services__block-text">Правильно оформленные товары увеличивают конверсию продаж и повышают количество лояльных клиентов.</p><span class="index-services__block-price">40 р. / SKU*</span>
+                      <p class="index-services__block-subprice">*цена за один SKU (разновидности одного товара по цвету или форме). Количество фото на 1 SKU отличаются в зависимости от необходимости раскрытия функционала и всех ракурсов товара.</p><a class="btn btn--dark" href="#">заказать</a>
+                    </div>
+                    <div class="index-services__block-views">
+                      <div class="index-services__block-image"><img src="app/img/content/index-services-1.jpg" alt="Картинка услуги 1"></div>
+                      <p class="index-services__block-subimage">До 01.05.2020 года в стоимость входят все услуги студии: работа модели, стилиста, визажиста, продюсера, реквизит, видеоролик (при необходимости).</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="index-services__block wow fadeIn">
+                  <h3 class="title-h3 index-services__block-title">Доставка товара</h3>
+                  <p class="index-services__block-subtitle">Если ваши товары уже на складе KazanExpress - вы можете не задумываться о транспортировке. Мы оперативно сделаем отбор товаров со склада и отвезем их на студию, а также сделаем обратное размещение после съемок.</p>
+                  <div class="index-services__block-row">
+                    <div class="index-services__block-info">
+                      <p class="index-services__block-text">Экономим время продавцов, позволяя акцентировать внимание на самом главном.</p><span class="index-services__block-price">10 р. / шт.</span><a class="btn btn--dark" href="#">Заказать доставку</a>
+                    </div>
+                    <div class="index-services__block-views">
+                      <div class="index-services__block-image"><img src="app/img/content/index-services-2.jpg" alt="Картинка услуги 2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="index-services__block wow fadeIn">
+                  <h3 class="title-h3 index-services__block-title">Экспресс-редактирование</h3>
+                  <p class="index-services__block-subtitle">Мы добавим ваш логотип и отредактируем сторонние фотографии, чтобы ваш магазин соответствовал лучшим современным стандартам дизайна.</p>
+                  <div class="index-services__block-row">
+                    <div class="index-services__block-info">
+                      <p class="index-services__block-text">Кроме роста ценности и доверия к продукту, это позволит увеличить количество показов товара.</p><span class="index-services__block-price">10 р. / шт.</span><a class="btn btn--dark" href="#">Заказать обработку</a>
+                    </div>
+                    <div class="index-services__block-views">
+                      <div class="index-services__block-image"><img src="app/img/content/index-services-3.jpg" alt="Картинка услуги 3"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="index-services__more wow fadeIn">
+                  <p class="index-services__more-text">Более подробно о процессе подачи заявки на предметную съёмку и экспедицию:</p><a class="index-services__more-link" href="#">Инструкция для продавцов KazanExpress</a>
+                </div>
+              </div>
+            </section>
+            <section class="index-portfolio wow fadeIn">
+              <div class="container">
+                <h2 class="title-h3 title-h3--white index-portfolio__title">Наши работы</h2>
+                <div class="index-portfolio__slider">
+                  <div class="index-portfolio__slide">
+                    <div class="index-portfolio__slide-wrap bottom">
+                      <div class="index-portfolio__slide-image"><img src="app/img/content/index-portfolio-1.jpg" alt="Картинка Портфолио 1"></div>
+                    </div>
+                  </div>
+                  <div class="index-portfolio__slide">
+                    <div class="index-portfolio__slide-wrap top">
+                      <div class="index-portfolio__slide-image"><img src="app/img/content/index-portfolio-2.jpg" alt="Картинка Портфолио 2"></div>
+                    </div>
+                  </div>
+                  <div class="index-portfolio__slide">
+                    <div class="index-portfolio__slide-wrap top">
+                      <div class="index-portfolio__slide-image"><img src="app/img/content/index-portfolio-3.jpg" alt="Картинка Портфолио 3"></div>
+                    </div>
+                  </div>
+                  <div class="index-portfolio__slide">
+                    <div class="index-portfolio__slide-wrap center">
+                      <div class="index-portfolio__slide-image"><img src="app/img/content/index-portfolio-4.jpg" alt="Картинка Портфолио 4"></div>
+                    </div>
+                  </div>
+                  <div class="index-portfolio__slide">
+                    <div class="index-portfolio__slide-wrap center">
+                      <div class="index-portfolio__slide-image"><img src="app/img/content/index-portfolio-5.jpg" alt="Картинка Портфолио 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </main>
         <footer class="footer">

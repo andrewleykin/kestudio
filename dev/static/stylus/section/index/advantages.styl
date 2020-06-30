@@ -1,0 +1,83 @@
+.index-advantages
+  background-color gray-6
+  padding-top 150px
+  padding-bottom 200px
+
+.index-advantages__wrap
+  max-width 1030px
+  margin 0 auto 100px
+
+.index-advantages__title
+  max-width 450px
+  margin-bottom 75px
+
+.index-advantages__row
+  display flex
+
+.index-advantages__info
+  max-width 400px
+  margin-right 25px
+  padding-top 10px
+
+.index-advantages__info-item
+  font-weight 500
+  font-size 24px
+  line-height 120%
+  letter-spacing 1.2px
+  color gray-1
+  height 173px
+  display flex
+  align-items center
+  position relative
+  &:before,
+  &:after
+    content ''
+    display block
+    width 200px
+    height 2px
+    background-color #E0E0E0
+    position absolute
+    left 0
+  &:before
+    top 0
+  &:after
+    bottom 0
+  &:not(:last-child):after
+    display none
+
+.index-advantages__images-row
+  display flex
+  align-items flex-end
+  &+&
+    margin-top 45px
+  &--center
+    justify-content center
+
+.index-advantages__image
+  border-radius 10px
+  overflow hidden
+  &+&
+    margin-left 44px
+  &.big
+    max-width 320px
+  &.small
+    max-width 230px
+
+.index-advantages__block
+  display flex
+
+.index-advantages__block-image
+  width 100%
+  max-width 550px
+  flex none
+  margin-right 50px
+  border-radius 10px
+  overflow hidden
+
+.index-advantages__block-text
+  font-weight 500
+  font-size 24px
+  line-height 120%
+  letter-spacing 1.2px
+  color gray-1
+  max-width 430px

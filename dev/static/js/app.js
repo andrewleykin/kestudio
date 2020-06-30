@@ -373,10 +373,10 @@
 		});
 	}
 
-	const pathname = window.location.pathname.slice(1)
-	const whitePages = ['become.html']
-
-	if (pathname === '' || whitePages.includes(pathname)) {
-		$('.header').addClass('header--white')
+	if ($('.index-portfolio').length) {
+		$('.index-portfolio__slider').slick({
+			arrows: false,
+			variableWidth: true
+		})
 	}
 })();

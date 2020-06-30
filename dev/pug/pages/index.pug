@@ -5,18 +5,8 @@ block variables
 
 block content
 	.index-page
-		.container
-			h1.page-title(style="margin-bottom: 1em;") Страница находится в разработке
-			p(style="margin-bottom: 1em;")
-				a(href="catalog.html") Каталог
-			p(style="margin-bottom: 1em;")
-				a(href="payment.html") Оплата
-			p(style="margin-bottom: 1em;")
-				a(href="thanks.html") Благодарность за оплату
-			p(style="margin-bottom: 1em;")
-				a(href="404.html") 404 страница
-			p(style="margin-bottom: 1em;")
-				a(href="become.html") Стать моделью
-			section#hero(style="height: 100vh;") section hero
-			section#about(style="height: 100vh;") section about
-			section#services(style="height: 100vh;") section services
+		include ../section/index/hero
+		include ../section/index/about
+		include ../section/index/advantages
+		include ../section/index/services
+		include ../section/index/portfolio
