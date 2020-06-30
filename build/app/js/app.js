@@ -376,7 +376,17 @@
 	if ($('.index-portfolio').length) {
 		$('.index-portfolio__slider').slick({
 			arrows: false,
-			variableWidth: true
+			variableWidth: true,
+			swipeToSlide: true,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						variableWidth: false
+					}
+				}
+			]
 		})
 	}
 })();

@@ -1,10 +1,15 @@
 .index-services
   padding-top 200px
   padding-bottom 185px
+  @media (max-width breakpoint-md)
+    padding-top 90px
+    padding-bottom 100px
 
 .index-services__title
   margin-bottom 100px
   max-width 555px
+  @media (max-width breakpoint-md)
+    margin-bottom 50px
 
 .index-services__block
   max-width 1030px
@@ -16,9 +21,29 @@
       margin-bottom 100px
     .index-services__block-price
       margin-bottom 25px
+  @media (max-width breakpoint-md)
+    &:nth-child(2)
+      .index-services__block-views
+        margin-right -30px
+        img
+          margin-left auto
+          display block
+    &:nth-child(3)
+      .index-services__block-image
+        img
+          margin-left auto
+          display block
+    &:nth-child(4)
+      .index-services__block-views
+        margin-left -30px
+    &+&
+      margin-top 100px
 
 .index-services__block-title
   margin-bottom 50px
+  @media (max-width breakpoint-md)
+    margin 0 auto 25px
+    max-width 260px
 
 .index-services__block-subtitle
   max-width 590px
@@ -28,13 +53,27 @@
   letter-spacing 1.2px
   color gray-2
   margin-bottom 50px
+  @media (max-width breakpoint-md)
+    font-weight normal
+    font-size 16px
+    line-height 125%
+    letter-spacing 0.8px
+    max-width 260px
+    margin 0 auto 50px
 
 .index-services__block-row
   display flex
+  @media (max-width breakpoint-md)
+    flex-direction column-reverse
 
 .index-services__block-info
   max-width 320px
   margin-right 110px
+  @media (max-width breakpoint-md)
+    max-width 240px
+    margin 50px auto 0
+    .btn
+      margin-left -30px
 
 .index-services__block-text 
   font-size 20px
@@ -42,6 +81,8 @@
   letter-spacing 1.2px
   color gray-1
   margin-bottom 50px
+  @media (max-width breakpoint-md)
+    display none
 
 .index-services__block-price
   font-weight bold
@@ -51,6 +92,9 @@
   color gray-2
   margin-bottom 50px
   display block
+  @media (max-width breakpoint-md)
+    margin-bottom 25px
+    font-size 24px
 
 .index-services__block-subprice
   font-size 14px
@@ -58,6 +102,19 @@
   letter-spacing 0.8px
   color gray-4
   margin-bottom 70px
+  @media (max-width breakpoint-md)
+    color gray-3
+    margin-bottom 25px
+
+.index-services__block-accent
+  display none
+  font-size 14px
+  line-height 125%
+  letter-spacing 0.8px
+  margin-bottom 50px
+  color color-red
+  @media (max-width breakpoint-md)
+    display block
 
 .index-services__block-image
   border-radius 10px
@@ -73,6 +130,8 @@
   color gray-1
   background-color gray-5
   border-radius 10px
+  @media (max-width breakpoint-md)
+    display none
 
 .index-services__more
   margin 100px auto 0
@@ -91,10 +150,17 @@
   text-align center
   letter-spacing 1.2px
   color gray-1
+  @media (max-width breakpoint-md)
+    font-size 14px
+    line-height 16px
+    letter-spacing 0.01em
+    padding 26px 0
 
 .index-services__more-text
   max-width 540px
   margin-bottom 30px
+  @media (max-width breakpoint-md)
+    margin-bottom 20px
 
 .index-services__more-link
   color inherit

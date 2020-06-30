@@ -1,19 +1,31 @@
 .index-about
   padding-top 200px
+  @media (max-width breakpoint-md)
+    padding-top 100px
+    padding-bottom 80px
 
 .index-about__text
   font-size 20px
   line-height 125%
   letter-spacing 1.2px
   color gray-1
+  @media (max-width breakpoint-md)
+    padding-left 25px
+    border-left 4px solid color-red
+    margin-left 65px
 
 .index-about__info
   max-width 860px
   margin 0 auto 250px
+  @media (max-width breakpoint-md)
+    margin-bottom 100px
 
 .index-about__info-title
   margin-bottom 90px
   max-width 650px
+  @media (max-width breakpoint-md)
+    margin-bottom 50px
+    max-width 75%
 
 .index-about__info-block
   max-width 730px
@@ -27,15 +39,37 @@
   max-width 100%
   border-radius 10px
   overflow hidden
+  @media (max-width breakpoint-md)
+    border-radius 0
+    min-width calc(100% + 30px)
+    margin-left -15px
+    img
+      width 100%
 
 .index-about__block
   display flex
   &+&
     margin-top 250px
+  @media (max-width breakpoint-md)
+    flex-direction column-reverse
+    &+&
+      margin-top 100px
+    &:nth-child(2)
+      .index-about__block-image:last-child
+        margin-left auto
+    &:nth-child(3)
+      .index-about__block-image:nth-child(2)
+        margin-left 22%
+      .index-about__block-image:nth-child(3),
+      .index-about__block-image:nth-child(4)
+        margin-left auto
 
 .index-about__block-images
   margin-right 50px
   display flex
+  @media (max-width breakpoint-md)
+    display block
+    margin-right 0
 
 .index-about__block-image
   max-width 300px
@@ -43,9 +77,32 @@
   overflow hidden
   &+&
     margin-left 40px
+  &.mobile
+    display none
+  @media (max-width breakpoint-md)
+    &.small
+      max-width 50%
+    &.big
+      max-width 72%
+    &.mobile
+      display block
+    &+&
+      margin-top 50px
+      margin-left 0
 
 .index-about__block-text
   max-width 340px
+  @media (max-width breakpoint-md)
+    margin-bottom 50px
 
 .index-about__footer-image
   margin-top 250px
+  @media (max-width breakpoint-md)
+    display none
+
+.index-about__footer-text
+  display none
+  @media (max-width breakpoint-md)
+    display block
+    margin-top 100px
+    max-width 72%

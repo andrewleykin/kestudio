@@ -3,10 +3,14 @@
   padding-bottom 210px
   background-color gray-1
   overflow hidden
+  @media (max-width breakpoint-md)
+    padding 50px 0
 
 .index-portfolio__title
   max-width 860px
   margin 0 auto 115px
+  @media (max-width breakpoint-md)
+    margin-bottom 50px
 
 .index-portfolio__slider
   .slick-list
@@ -16,6 +20,9 @@
   height 100%
   &+&
     margin-left 80px
+  @media (max-width breakpoint-md)
+    &+&
+      margin-left 15px
 
 .index-portfolio__slide-wrap
   display flex
@@ -25,7 +32,13 @@
     justify-content center
   &.bottom
     justify-content flex-end
+  @media (max-width breakpoint-md)
+    min-height auto
+    display block
 
 .index-portfolio__slide-image
   border-radius 10px
   overflow hidden
+  @media (max-width breakpoint-md)
+    img
+      width 100%

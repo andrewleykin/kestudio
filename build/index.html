@@ -52,9 +52,10 @@
         </header>
         <main class="main">
           <div class="index-page">
-            <section class="index-hero hero-background">
+            <section class="index-hero">
               <div class="index-hero__video">
-                <video src="app/img/content/videoplayback.mp4" muted autoplay loop></video>
+                <video class="desktop" src="app/img/content/videoplayback.mp4" muted autoplay loop></video>
+                <video class="mobile" src="app/img/content/videoplayback-mobile.mp4" muted autoplay loop></video>
               </div>
               <div class="container">
                 <div class="index-hero__wrap">
@@ -73,18 +74,21 @@
                 </div>
                 <div class="index-about__block wow fadeIn">
                   <div class="index-about__block-images">
-                    <div class="index-about__block-image"><img src="app/img/content/index-block-1.jpg" alt="Пример продукта 1"></div>
-                    <div class="index-about__block-image"><img src="app/img/content/index-block-2.jpg" alt="Пример продукта 2"></div>
+                    <div class="index-about__block-image small"><img src="app/img/content/index-block-1.jpg" alt="Пример продукта 1"></div>
+                    <div class="index-about__block-image big"><img src="app/img/content/index-block-2.jpg" alt="Пример продукта 2"></div>
                   </div>
                   <p class="index-about__text index-about__block-text">Мы предоставляем качественные и креативные снимки, вызывая у клиента желание оформить заказ</p>
                 </div>
                 <div class="index-about__block wow fadeIn">
                   <div class="index-about__block-images">
-                    <div class="index-about__block-image"><img src="app/img/content/index-block-2.jpg" alt="Пример продукта 3"></div>
-                    <div class="index-about__block-image"><img src="app/img/content/index-block-1.jpg" alt="Пример продукта 4"></div>
+                    <div class="index-about__block-image big"><img src="app/img/content/index-block-2.jpg" alt="Пример продукта 3"></div>
+                    <div class="index-about__block-image small"><img src="app/img/content/index-block-1.jpg" alt="Пример продукта 4"></div>
+                    <div class="index-about__block-image small mobile"><img src="app/img/content/index-block-1.jpg" alt="Пример продукта 5"></div>
+                    <div class="index-about__block-image big mobile"><img src="app/img/content/index-block-2.jpg" alt="Пример продукта 6"></div>
                   </div>
                   <p class="index-about__text index-about__block-text">Каждую неделю мы пополняем базу моделей, которые смогут грамотно и выгодно представить ваш продукт на маркетплейсе, выделяя его среди конкурентов</p>
                 </div>
+                <p class="index-about__footer-text index-about__text">Сохраняя потрясающий уровень качества, наши цены в 5-10 раз ниже любой профессиональной студии. В этом заключается наш подход к партнерам, который не имеет аналогов среди российских маркетплейсов.</p>
               </div>
               <div class="index-about__footer-image"><img src="app/img/content/index-about-footer.jpg" alt="Картинка о компании"></div>
             </section>
@@ -94,10 +98,18 @@
                   <h2 class="title-h3 index-advantages__title">К услугам  наших продавцов:</h2>
                   <div class="index-advantages__row">
                     <ul class="index-advantages__info">
-                      <li class="index-advantages__info-item">Семь рабочих зон для проведения съемок любой сложности</li>
-                      <li class="index-advantages__info-item">Широкий ассортимент аксессуаров и нарядов</li>
-                      <li class="index-advantages__info-item">Одно из лучших профессиональных оборудований в стране</li>
-                      <li class="index-advantages__info-item">Технология съемки товара 360 градусов </li>
+                      <li class="index-advantages__info-item"> 
+                        <p>Семь рабочих зон для проведения съемок любой сложности</p><img src="app/img/content/index-advantages-1.jpg" alt="Картинка преимущество 5">
+                      </li>
+                      <li class="index-advantages__info-item"> 
+                        <p>Широкий ассортимент аксессуаров и нарядов</p><img src="app/img/content/index-advantages-2.jpg" alt="Картинка преимущество 6">
+                      </li>
+                      <li class="index-advantages__info-item"> 
+                        <p>Одно из лучших профессиональных оборудований в стране</p><img src="app/img/content/index-advantages-3.jpg" alt="Картинка преимущество 7">
+                      </li>
+                      <li class="index-advantages__info-item"> 
+                        <p>Технология съемки товара 360 градусов </p><img src="app/img/content/index-advantages-4.jpg" alt="Картинка преимущество 8">
+                      </li>
                     </ul>
                     <div class="index-advantages__images">
                       <div class="index-advantages__images-row">
@@ -128,11 +140,12 @@
                   <div class="index-services__block-row">
                     <div class="index-services__block-info">
                       <p class="index-services__block-text">Правильно оформленные товары увеличивают конверсию продаж и повышают количество лояльных клиентов.</p><span class="index-services__block-price">40 р. / SKU*</span>
-                      <p class="index-services__block-subprice">*цена за один SKU (разновидности одного товара по цвету или форме). Количество фото на 1 SKU отличаются в зависимости от необходимости раскрытия функционала и всех ракурсов товара.</p><a class="btn btn--dark" href="#">заказать</a>
+                      <p class="index-services__block-subprice">*цена за один SKU (разновидности одного товара по цвету или форме). Количество фото на 1 SKU отличаются в зависимости от необходимости раскрытия функционала и всех ракурсов товара.</p>
+                      <p class="index-services__block-accent">До 01.08.2020 года в стоимость входят все услуги студии: работа модели, стилиста, визажиста, продюсера, реквизит, видеоролик (при необходимости).</p><a class="btn btn--dark" href="#">заказать</a>
                     </div>
                     <div class="index-services__block-views">
                       <div class="index-services__block-image"><img src="app/img/content/index-services-1.jpg" alt="Картинка услуги 1"></div>
-                      <p class="index-services__block-subimage">До 01.05.2020 года в стоимость входят все услуги студии: работа модели, стилиста, визажиста, продюсера, реквизит, видеоролик (при необходимости).</p>
+                      <p class="index-services__block-subimage">До 01.08.2020 года в стоимость входят все услуги студии: работа модели, стилиста, визажиста, продюсера, реквизит, видеоролик (при необходимости).</p>
                     </div>
                   </div>
                 </div>
@@ -161,7 +174,7 @@
                   </div>
                 </div>
                 <div class="index-services__more wow fadeIn">
-                  <p class="index-services__more-text">Более подробно о процессе подачи заявки на предметную съёмку и экспедицию:</p><a class="index-services__more-link" href="#">Инструкция для продавцов KazanExpress</a>
+                  <p class="index-services__more-text">Более подробно о процессе подачи заявки на предметную съёмку и доставку:</p><a class="index-services__more-link" href="#">Инструкция для продавцов KazanExpress</a>
                 </div>
               </div>
             </section>
