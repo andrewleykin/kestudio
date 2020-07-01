@@ -2647,6 +2647,9 @@ textarea {
     top: 0;
     left: 0;
     right: 0;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
   }
 
   .header .container {

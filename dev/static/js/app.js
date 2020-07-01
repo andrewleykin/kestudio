@@ -3,24 +3,31 @@
 (function(){
 
 	const isMobile = window.innerWidth <= 768
+	const isIndexPage = $('.index-page').length
+	const header = $('.header')
+	const headerNotBgClass = 'background-transparent'
 
 	if (isMobile) {
 		$('.header__burger').click(() => {
-			$('.header').toggleClass('active')
+			header.toggleClass('active')
 			$('body').toggleClass('overflow-hidden')
+			if (isIndexPage && window.pageYOffset < $('.index-hero').height() - 50) {
+				header.toggleClass(headerNotBgClass)
+			}
 		})
 
 		$(document).click(function (e) {
 			var el = '.header__burger';
 			if ($(e.target).closest(el).length) return;
-			$('.header').removeClass('active')
+			header.removeClass('active')
 			$('body').removeClass('overflow-hidden')
+			if (isIndexPage  && window.pageYOffset < $('.index-hero').height() - 50) {
+				header.addClass(headerNotBgClass)
+			}
 		});
 
-		if ($('.index-page').length) {
-			const header = $('.header')
+		if (isIndexPage) {
 			const main = $('.main')
-			const headerNotBgClass = 'background-transparent'
 			const mainNotPaddingClass = 'not-paddding-top'
 			const indexHeroHeight = $('.index-hero').height()
 
@@ -402,5 +409,11 @@
 
 	if ($('.index-hero').length) {
 		$('.index-hero__video').find('video').get(isMobile ? 1 : 0).play()
+	}
+
+	if (window.location.hash) {
+		$('html, body').stop().animate({
+			scrollTop: $(window.location.hash).offset().top
+		}, 0);
 	}
 })();
