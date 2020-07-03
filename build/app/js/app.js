@@ -333,16 +333,18 @@
 			})
 		}
 
-		$('body').on('click', '.card-info__next', function(e) {
-			const slug = $(e.currentTarget).data('remodal-target')
-			setTimeout(() => initSlider(slug),0)
-		});
-
-		$('.catalog-list').on('click', '.catalog-list-block', function(e) {
-			const slug = $(e.currentTarget).data('name')
+		const initRemodal = (slug) => {
 			const remodal = $(`[data-remodal-id=${slug}]`).remodal()
 			remodal.open()
 			initSlider(slug)
+		}
+
+		$('body').on('click', '.card-info__next', function(e) {
+			initRemodal($(e.currentTarget).data('remodal-target'))
+		});
+
+		$('.catalog-list').on('click', '.catalog-list-block', function(e) {
+			initRemodal($(e.currentTarget).data('name'))
 		});
 
 		$(document).on('closed', '.remodal', function (e) {
