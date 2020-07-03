@@ -305,7 +305,15 @@
 					slidesToScroll: 1,
 					asNavFor: thumbEl,
 					infinity: true,
-					arrows: false
+					arrows: false,
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								adaptiveHeight: true
+							}
+						}
+					]
 				})
 			}
 	
@@ -379,6 +387,16 @@
 
 	if ($('[data-phone]').length) {
 		$('[data-phone]').mask('+7 (000) 000 00 00')
+	}
+
+	if ($('[data-instagram]').length) {
+		const prefix = '@'
+		$('[data-instagram]').on('input propertychange', (e) => {
+			const curVal = $(e.currentTarget).val()
+			if (curVal.slice(0, 1) !== prefix && curVal !== prefix) {
+				$(e.currentTarget).val(prefix + curVal)
+			}
+		})
 	}
 
 	if ($('.payment-page').length) {

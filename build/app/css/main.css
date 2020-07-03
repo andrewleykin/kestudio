@@ -2565,14 +2565,21 @@ textarea {
 
   .page-title {
     font-size: 2.25rem;
+    font-weight: bold;
   }
 
   .title-h3 {
     font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .form-group__label {
+    font-size: 0.875rem;
   }
 
   .checkbox-label {
     padding-left: 40px;
+    white-space: normal;
   }
 
   .form-select.active .select-field__close {
@@ -2969,8 +2976,8 @@ textarea {
     color: #fff;
     background-color: #333;
     padding: 120px 20px 150px;
-    width: calc(100% + 20px);
-    margin-left: -10px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
   }
 
   .become-form {
@@ -3530,6 +3537,12 @@ textarea {
 
   .card-info__next {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .index-portfolio__slide {
+    max-width: 155px;
   }
 }
 

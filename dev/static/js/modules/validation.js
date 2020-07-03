@@ -34,7 +34,7 @@
 				
 		    validator.on('change keyup', 'input[data-name]', function () {
 						var elm = $(this);
-						if (elm.val().trim() === '₽') elm.val('')
+						if (elm.val().trim() === '₽' || elm.val().trim() === '@') elm.val('')
 		        checkValidity(elm);
 				});
 				
@@ -85,7 +85,7 @@
 	        val = elm.val(),
 	        block = elm.parent(),
 	        name_reg = /^[A-Za-zА-Яа-яЁё\-\s]+$/,
-					text_reg = /^[A-Za-zА-Яа-яёЁ\s\d]/,
+					text_reg = /^[(A-Za-zА-Яа-яёЁ|@)\s\d]/,
 	        mail_reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
 	        phone_reg = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/,
 	        num_reg = /^\d+$/;

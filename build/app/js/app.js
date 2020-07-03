@@ -305,7 +305,15 @@
 					slidesToScroll: 1,
 					asNavFor: thumbEl,
 					infinity: true,
-					arrows: false
+					arrows: false,
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								adaptiveHeight: true
+							}
+						}
+					]
 				})
 			}
 	
@@ -379,6 +387,16 @@
 
 	if ($('[data-phone]').length) {
 		$('[data-phone]').mask('+7 (000) 000 00 00')
+	}
+
+	if ($('[data-instagram]').length) {
+		const prefix = '@'
+		$('[data-instagram]').on('input propertychange', (e) => {
+			const curVal = $(e.currentTarget).val()
+			if (curVal.slice(0, 1) !== prefix && curVal !== prefix) {
+				$(e.currentTarget).val(prefix + curVal)
+			}
+		})
 	}
 
 	if ($('.payment-page').length) {
@@ -473,7 +491,7 @@ $(document).ready(function () {
 				
 		    validator.on('change keyup', 'input[data-name]', function () {
 						var elm = $(this);
-						if (elm.val().trim() === '₽') elm.val('')
+						if (elm.val().trim() === '₽' || elm.val().trim() === '@') elm.val('')
 		        checkValidity(elm);
 				});
 				
@@ -524,7 +542,7 @@ $(document).ready(function () {
 	        val = elm.val(),
 	        block = elm.parent(),
 	        name_reg = /^[A-Za-zА-Яа-яЁё\-\s]+$/,
-					text_reg = /^[A-Za-zА-Яа-яёЁ\s\d]/,
+					text_reg = /^[(A-Za-zА-Яа-яёЁ|@)\s\d]/,
 	        mail_reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
 	        phone_reg = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/,
 	        num_reg = /^\d+$/;
