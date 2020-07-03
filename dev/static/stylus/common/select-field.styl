@@ -15,6 +15,9 @@
         display none
     .select-field__close
       display block
+  &.right
+    .select-field__list
+      right 0
   &[data-range="true"]
     .range-field__reset
       &.mobile
@@ -81,7 +84,7 @@
 .select-field__list
   position absolute
   top 100%
-  width 100%
+  min-width 100%
   border 1px solid gray-5
   display none
   padding 15px 0

@@ -229,7 +229,10 @@
 
 			active.click(() => {
 				self.toggleClass('open')
-				selects.not(self).removeClass('open')
+				if (!isMobile && self.offset().left + self.find('.select-field__list').width() > $(window).width()) {
+					self.addClass('right')
+				}
+				selects.not(self).removeClass('open').removeClass('right')
 				if (isMobile) {
 					$('.catalog-filters__list').addClass('hidden')
 					$('.catalog-filters__form-title').html(`<i></i> ${placeholder}`)
