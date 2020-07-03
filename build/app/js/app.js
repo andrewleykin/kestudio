@@ -270,6 +270,8 @@
 			const videoEl = videoBlock.find('video')
 			let videoShow = 0
 
+			debugger
+
 			if (!thumbEl.hasClass('slick-initialized')) {
 				thumbEl.slick({
 					vertical: true,
@@ -330,6 +332,11 @@
 				videoEl.get(0).play()
 			})
 		}
+
+		$('body').on('click', '.card-info__next', function(e) {
+			const slug = $(e.currentTarget).data('remodal-target')
+			setTimeout(() => initSlider(slug),0)
+		});
 
 		$('.catalog-list').on('click', '.catalog-list-block', function(e) {
 			const slug = $(e.currentTarget).data('name')

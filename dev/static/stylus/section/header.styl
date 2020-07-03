@@ -1,6 +1,7 @@
 .header
   padding-top 40px
   z-index 2
+  position relative
   &:before
     content ''
     display none
@@ -91,7 +92,7 @@
   position absolute
   top 50px
   left 50%
-  transform translateX(-50%)
+  margin-left -85px
   svg
     fill gray-1
     width 170px
@@ -104,7 +105,8 @@
     position relative
     transform none
     top unset
-    left unset
+    left unset 
+    margin-left 0
     svg
       fill gray-6
       width 86px
