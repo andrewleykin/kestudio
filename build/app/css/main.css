@@ -1521,6 +1521,14 @@ textarea {
   display: none;
 }
 
+.index-about__block-image.small {
+  max-width: 260px;
+}
+
+.index-about__block-image.big {
+  max-width: 300px;
+}
+
 .index-about__block-text {
   max-width: 340px;
 }
@@ -1866,6 +1874,7 @@ textarea {
 .index-portfolio__slide-image {
   border-radius: 10px;
   overflow: hidden;
+  max-width: 385px;
 }
 
 /* Стили страницы index */
