@@ -273,47 +273,43 @@
 			const videoEl = videoBlock.find('video')
 			let videoShow = 0
 
-			if (!thumbEl.hasClass('slick-initialized')) {
-				thumbEl.slick({
-					vertical: true,
-					slidesToShow: 4,
-					slidesToScroll: 1,
-					arrows: false,
-					asNavFor: displayEl,
-					focusOnSelect: true,
-					infinity: true,
-					responsive: [
-						{
-							breakpoint: 768,
-							settings: {
-								slidesToShow: 4,
-								slidesToScroll: 1,
-								vertical: false,
-								variableWidth: true,
-								centerMode: true
-							}
-						},
-					]
-				})
-			}
-
-			if (!displayEl.hasClass('slick-initialized')) {
-				displayEl.slick({
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					asNavFor: thumbEl,
-					infinity: true,
-					arrows: false,
-					responsive: [
-						{
-							breakpoint: 768,
-							settings: {
-								adaptiveHeight: true
-							}
+			thumbEl.slick({
+				vertical: true,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				arrows: false,
+				asNavFor: displayEl,
+				focusOnSelect: true,
+				infinity: true,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 4,
+							slidesToScroll: 1,
+							vertical: false,
+							variableWidth: true,
+							centerMode: true
 						}
-					]
-				})
-			}
+					},
+				]
+			})
+
+			displayEl.slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				asNavFor: thumbEl,
+				infinity: true,
+				arrows: false,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							adaptiveHeight: true
+						}
+					}
+				]
+			})
 	
 			arrows.click(function(){
 				$(displayEl).slick($(this).hasClass('prev') ? 'slickPrev' : 'slickNext')

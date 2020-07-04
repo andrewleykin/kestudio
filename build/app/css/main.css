@@ -2392,7 +2392,7 @@ textarea {
   }
 
   .card-info__name {
-    max-width: 80%;
+    max-width: 70%;
   }
 
   .card-info__header {
@@ -3485,6 +3485,9 @@ textarea {
   }
 
   .card-info__expirience {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
     position: absolute;
     right: 22px;
     top: 30px;
