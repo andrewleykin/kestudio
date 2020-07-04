@@ -348,7 +348,12 @@
 			const currentSlug = $(e.currentTarget).closest('.card-modal').data('remodal-id')
 			const currentBlock = $(`[data-name="${currentSlug}"]`)[0]
 			const nextBlock = $(currentBlock).closest('.catalog-list__block').next()
-			const nextSlug = nextBlock.find('.catalog-list-block').data('name')
+
+			const getDataName = block => $(block).find('.catalog-list-block').data('name')
+			
+			const nextSlug = nextBlock.length
+				? getDataName(nextBlock)
+				: getDataName($(currentBlock).closest('.catalog-list__blocks').find('.catalog-list__block').first())
 			initRemodal(nextSlug)
 		});
 
