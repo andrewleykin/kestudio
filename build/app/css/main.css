@@ -345,6 +345,10 @@ textarea {
   margin-bottom: 5px;
 }
 
+.range-field__select {
+  font-family: -apple-system, 'Roboto', Arial, sans-serif;
+}
+
 .range-field__reset {
   letter-spacing: 0.0625rem;
   color: #828282;
@@ -1454,7 +1458,8 @@ textarea {
 }
 
 .index-about {
-  padding-top: 200px;
+  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .index-about__text {
@@ -1505,6 +1510,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .index-about__block-image {
@@ -1675,7 +1683,8 @@ textarea {
 }
 
 .index-services {
-  padding-top: 200px;
+  margin-top: 100px;
+  padding-top: 100px;
   padding-bottom: 185px;
 }
 
@@ -3066,7 +3075,8 @@ textarea {
   }
 
   .index-about {
-    padding-top: 100px;
+    margin-top: 50px;
+    padding-top: 50px;
     padding-bottom: 80px;
   }
 
@@ -3228,7 +3238,8 @@ textarea {
   }
 
   .index-services {
-    padding-top: 90px;
+    margin-top: 40px;
+    padding-top: 50px;
     padding-bottom: 100px;
     overflow: hidden;
   }

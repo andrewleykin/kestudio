@@ -356,7 +356,7 @@
 					searchIndex = index
 				}
 			})
-			const nextIndex = searchIndex + 1 <= blocks.length ? searchIndex + 1 : 0
+			const nextIndex = searchIndex + 1 < blocks.length ? searchIndex + 1 : 0
 			
 			const nextSlug = blocks.eq(nextIndex).data('name')
 			initRemodal(nextSlug)

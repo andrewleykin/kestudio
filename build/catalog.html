@@ -94,13 +94,13 @@
                           <div class="range-field select-field__list">
                             <div class="range-field__info">
                               <div class="range-field__info-block"><span class="range-field__name">Выбранный возрастной диапазон</span>
-                                <p class="range-field__select"><span class="range-field__select-start">18</span>-<span class="range-field__select-end">23</span></p>
+                                <p class="range-field__select"><span class="range-field__select-start">18 ₽ </span>- <span class="range-field__select-end">23 ₽</span></p>
                               </div>
                               <button class="range-field__reset" type="button">сброс</button>
                             </div>
                             <div class="range-field__slider">
                               <div class="range-field__slider-info"><span class="range-field__slider-min">3</span><span class="range-field__slider-max">45</span></div>
-                              <div class="range-field__slider-slider" data-min="3" data-max="45" data-start="18" data-end="23" data-step="5" data-suffix=""></div>
+                              <div class="range-field__slider-slider" data-min="3" data-max="45" data-start="18" data-end="23" data-step="5" data-suffix="₽"></div>
                             </div>
                           </div>
                         </div>
@@ -250,7 +250,6 @@
                       <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
                     </div>
-                    <!-- Этот блок надо вставлять в каждый .catalog-list__block со своим data-remodal-id-->
                     <div class="card-modal remodal" data-remodal-id="name_slug">
                       <div class="card-modal__wrap">
                         <div class="card-views">
@@ -334,52 +333,267 @@
                     </div>
                   </div>
                   <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug">
+                    <div class="catalog-list-block" data-name="name_slug2">
                       <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
                     </div>
+                    <div class="card-modal remodal" data-remodal-id="name_slug2">
+                      <div class="card-modal__wrap">
+                        <div class="card-views">
+                          <div class="card-views__thumbs">
+                            <div class="card-views__thumbs-slider">
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 1"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 2"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 3"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 4"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 5"></div>
+                            </div>
+                            <button class="card-views__thumbs-video" type="button" aria-label="Включить видео ИМЯ">
+                              <svg class="icon icon-play ">
+                                <use xlink:href="app/img/svg/symbol/sprite.svg#play"></use>
+                              </svg><span>Видео</span>
+                            </button>
+                          </div>
+                          <div class="card-views__display"><span class="card-views__display-text">агентство: kestudio</span>
+                            <button class="card-views__display-arrow prev" type="button" aria-label="Предыдущее фото">
+                              <svg class="icon icon-arrow-left ">
+                                <use xlink:href="app/img/svg/symbol/sprite.svg#arrow-left"></use>
+                              </svg>
+                            </button>
+                            <button class="card-views__display-arrow next" type="button" aria-label="Следующее фото">
+                              <svg class="icon icon-arrow-right ">
+                                <use xlink:href="app/img/svg/symbol/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </button>
+                            <div class="card-views__display-slider">
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 1"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 2"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 3"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 4"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 5"></div>
+                            </div>
+                            <div class="card-views__display-video">
+                              <video src="app/img/content/videoplayback.mp4" controls></video>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-info">
+                          <button class="card-info__close modal-close" type="button" aria-label="Закрыть карточку" data-remodal-action="close">
+                            <svg class="icon icon-close-modal ">
+                              <use xlink:href="app/img/svg/symbol/sprite.svg#close-modal"></use>
+                            </svg>
+                          </button>
+                          <h1 class="card-info__name">Яков Зорянкин</h1>
+                          <div class="card-info__wrap">
+                            <div class="card-info__header">
+                              <div class="card-info__price card-info__price--red"><span class="card-info__price-num">2000<i class="rouble-icon"></i></span><span class="card-info__legend">стоимость съемок от 3&nbsp;часов</span></div>
+                              <div class="card-info__price"><span class="card-info__price-num">1000<i class="rouble-icon"></i></span><span class="card-info__legend">стоимость съемок 1&nbsp;часа </span></div>
+                              <div class="card-info__expirience"><span class="card-info__legend">Опыт </span><span class="card-info__expirience-value">5 лет</span></div>
+                            </div>
+                            <div class="card-info__params">
+                              <div class="card-info__params-block"><span class="card-info__params-value">25</span><span class="card-info__legend">возраст</span></div>
+                              <div class="card-info__params-block"><span class="card-info__params-value">178</span><span class="card-info__legend">Рост</span></div>
+                              <div class="card-info__params-block"><span class="card-info__params-value">XS-S</span><span class="card-info__legend">размер одежды</span></div>
+                              <div class="card-info__params-block"><span class="card-info__params-value">40</span><span class="card-info__legend">размер обуви</span></div>
+                            </div>
+                            <div class="card-info__readiness"><span class="card-info__legend">Готовность к съемкам</span>
+                              <div class="card-info__readiness-wrap">
+                                <div class="card-info__readiness-view">
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">в белье</span><span class="card-info__readiness-perc">+20%</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">в купальнике</span><span class="card-info__readiness-perc">+30%</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">товары для взрослых</span><span class="card-info__readiness-perc">+20%</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">товары для беременных</span><span class="card-info__readiness-perc">+20%</span></div>
+                                </div>
+                                <div class="card-info__readiness-params">
+                                  <div class="card-info__readiness-row"><span class="card-info__legend">Обхват груди</span><span class="card-info__readiness-value">89</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__legend">Обхват талии</span><span class="card-info__readiness-value">61</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__legend">Обхват бедер</span><span class="card-info__readiness-value">92</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-info__actions"><a class="btn card-info__btn" href="#">Заказать фотосессию</a>
+                            <button class="card-info__next card-info__legend" type="button" data-remodal-target="next_name_slug">Перейти к следующей модели</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug">
+                    <div class="catalog-list-block" data-name="name_slug3">
                       <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
                     </div>
+                    <div class="card-modal remodal" data-remodal-id="name_slug3">
+                      <div class="card-modal__wrap">
+                        <div class="card-views">
+                          <div class="card-views__thumbs">
+                            <div class="card-views__thumbs-slider">
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 1"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 2"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 3"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 4"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 5"></div>
+                            </div>
+                            <button class="card-views__thumbs-video" type="button" aria-label="Включить видео ИМЯ">
+                              <svg class="icon icon-play ">
+                                <use xlink:href="app/img/svg/symbol/sprite.svg#play"></use>
+                              </svg><span>Видео</span>
+                            </button>
+                          </div>
+                          <div class="card-views__display"><span class="card-views__display-text">агентство: kestudio</span>
+                            <button class="card-views__display-arrow prev" type="button" aria-label="Предыдущее фото">
+                              <svg class="icon icon-arrow-left ">
+                                <use xlink:href="app/img/svg/symbol/sprite.svg#arrow-left"></use>
+                              </svg>
+                            </button>
+                            <button class="card-views__display-arrow next" type="button" aria-label="Следующее фото">
+                              <svg class="icon icon-arrow-right ">
+                                <use xlink:href="app/img/svg/symbol/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </button>
+                            <div class="card-views__display-slider">
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 1"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 2"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 3"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 4"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 5"></div>
+                            </div>
+                            <div class="card-views__display-video">
+                              <video src="app/img/content/videoplayback.mp4" controls></video>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-info">
+                          <button class="card-info__close modal-close" type="button" aria-label="Закрыть карточку" data-remodal-action="close">
+                            <svg class="icon icon-close-modal ">
+                              <use xlink:href="app/img/svg/symbol/sprite.svg#close-modal"></use>
+                            </svg>
+                          </button>
+                          <h1 class="card-info__name">Яков Зорянкин</h1>
+                          <div class="card-info__wrap">
+                            <div class="card-info__header">
+                              <div class="card-info__price card-info__price--red"><span class="card-info__price-num">2000<i class="rouble-icon"></i></span><span class="card-info__legend">стоимость съемок от 3&nbsp;часов</span></div>
+                              <div class="card-info__price"><span class="card-info__price-num">1000<i class="rouble-icon"></i></span><span class="card-info__legend">стоимость съемок 1&nbsp;часа </span></div>
+                              <div class="card-info__expirience"><span class="card-info__legend">Опыт </span><span class="card-info__expirience-value">5 лет</span></div>
+                            </div>
+                            <div class="card-info__params">
+                              <div class="card-info__params-block"><span class="card-info__params-value">25</span><span class="card-info__legend">возраст</span></div>
+                              <div class="card-info__params-block"><span class="card-info__params-value">178</span><span class="card-info__legend">Рост</span></div>
+                              <div class="card-info__params-block"><span class="card-info__params-value">XS-S</span><span class="card-info__legend">размер одежды</span></div>
+                              <div class="card-info__params-block"><span class="card-info__params-value">40</span><span class="card-info__legend">размер обуви</span></div>
+                            </div>
+                            <div class="card-info__readiness"><span class="card-info__legend">Готовность к съемкам</span>
+                              <div class="card-info__readiness-wrap">
+                                <div class="card-info__readiness-view">
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">в белье</span><span class="card-info__readiness-perc">+20%</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">в купальнике</span><span class="card-info__readiness-perc">+30%</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">товары для взрослых</span><span class="card-info__readiness-perc">+20%</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">товары для беременных</span><span class="card-info__readiness-perc">+20%</span></div>
+                                </div>
+                                <div class="card-info__readiness-params">
+                                  <div class="card-info__readiness-row"><span class="card-info__legend">Обхват груди</span><span class="card-info__readiness-value">89</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__legend">Обхват талии</span><span class="card-info__readiness-value">61</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__legend">Обхват бедер</span><span class="card-info__readiness-value">92</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-info__actions"><a class="btn card-info__btn" href="#">Заказать фотосессию</a>
+                            <button class="card-info__next card-info__legend" type="button" data-remodal-target="next_name_slug">Перейти к следующей модели</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug">
+                    <div class="catalog-list-block" data-name="name_slug4">
                       <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
                     </div>
-                  </div>
-                  <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug">
-                      <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
-                      <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
-                      <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
-                    </div>
-                  </div>
-                  <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug">
-                      <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
-                      <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
-                      <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
-                    </div>
-                  </div>
-                  <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug">
-                      <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
-                      <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
-                      <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
-                    </div>
-                  </div>
-                  <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug">
-                      <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
-                      <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
-                      <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
+                    <div class="card-modal remodal" data-remodal-id="name_slug4">
+                      <div class="card-modal__wrap">
+                        <div class="card-views">
+                          <div class="card-views__thumbs">
+                            <div class="card-views__thumbs-slider">
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 1"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 2"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 3"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 4"></div>
+                              <div class="card-views__thumbs-slide"><img src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 5"></div>
+                            </div>
+                            <button class="card-views__thumbs-video" type="button" aria-label="Включить видео ИМЯ">
+                              <svg class="icon icon-play ">
+                                <use xlink:href="app/img/svg/symbol/sprite.svg#play"></use>
+                              </svg><span>Видео</span>
+                            </button>
+                          </div>
+                          <div class="card-views__display"><span class="card-views__display-text">агентство: kestudio</span>
+                            <button class="card-views__display-arrow prev" type="button" aria-label="Предыдущее фото">
+                              <svg class="icon icon-arrow-left ">
+                                <use xlink:href="app/img/svg/symbol/sprite.svg#arrow-left"></use>
+                              </svg>
+                            </button>
+                            <button class="card-views__display-arrow next" type="button" aria-label="Следующее фото">
+                              <svg class="icon icon-arrow-right ">
+                                <use xlink:href="app/img/svg/symbol/sprite.svg#arrow-right"></use>
+                              </svg>
+                            </button>
+                            <div class="card-views__display-slider">
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 1"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 2"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 3"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 4"></div>
+                              <div class="card-views__display-slide"><img src="app/img/content/card.jpg" alt="Просмотр ИМЯ 5"></div>
+                            </div>
+                            <div class="card-views__display-video">
+                              <video src="app/img/content/videoplayback.mp4" controls></video>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-info">
+                          <button class="card-info__close modal-close" type="button" aria-label="Закрыть карточку" data-remodal-action="close">
+                            <svg class="icon icon-close-modal ">
+                              <use xlink:href="app/img/svg/symbol/sprite.svg#close-modal"></use>
+                            </svg>
+                          </button>
+                          <h1 class="card-info__name">Яков Зорянкин</h1>
+                          <div class="card-info__wrap">
+                            <div class="card-info__header">
+                              <div class="card-info__price card-info__price--red"><span class="card-info__price-num">2000<i class="rouble-icon"></i></span><span class="card-info__legend">стоимость съемок от 3&nbsp;часов</span></div>
+                              <div class="card-info__price"><span class="card-info__price-num">1000<i class="rouble-icon"></i></span><span class="card-info__legend">стоимость съемок 1&nbsp;часа </span></div>
+                              <div class="card-info__expirience"><span class="card-info__legend">Опыт </span><span class="card-info__expirience-value">5 лет</span></div>
+                            </div>
+                            <div class="card-info__params">
+                              <div class="card-info__params-block"><span class="card-info__params-value">25</span><span class="card-info__legend">возраст</span></div>
+                              <div class="card-info__params-block"><span class="card-info__params-value">178</span><span class="card-info__legend">Рост</span></div>
+                              <div class="card-info__params-block"><span class="card-info__params-value">XS-S</span><span class="card-info__legend">размер одежды</span></div>
+                              <div class="card-info__params-block"><span class="card-info__params-value">40</span><span class="card-info__legend">размер обуви</span></div>
+                            </div>
+                            <div class="card-info__readiness"><span class="card-info__legend">Готовность к съемкам</span>
+                              <div class="card-info__readiness-wrap">
+                                <div class="card-info__readiness-view">
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">в белье</span><span class="card-info__readiness-perc">+20%</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">в купальнике</span><span class="card-info__readiness-perc">+30%</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">товары для взрослых</span><span class="card-info__readiness-perc">+20%</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__readiness-name">товары для беременных</span><span class="card-info__readiness-perc">+20%</span></div>
+                                </div>
+                                <div class="card-info__readiness-params">
+                                  <div class="card-info__readiness-row"><span class="card-info__legend">Обхват груди</span><span class="card-info__readiness-value">89</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__legend">Обхват талии</span><span class="card-info__readiness-value">61</span></div>
+                                  <div class="card-info__readiness-row"><span class="card-info__legend">Обхват бедер</span><span class="card-info__readiness-value">92</span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-info__actions"><a class="btn card-info__btn" href="#">Заказать фотосессию</a>
+                            <button class="card-info__next card-info__legend" type="button" data-remodal-target="next_name_slug">Перейти к следующей модели</button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div><span class="catalog-list__views">Показаны 20 из 575 моделей</span>
