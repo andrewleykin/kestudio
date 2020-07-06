@@ -449,7 +449,7 @@
 		$('.index-hero__video').find('video').get(isMobile ? 1 : 0).play()
 	}
 
-	if (window.location.hash) {
+	if (window.location.hash && $(window.location.hash).length) {
 		$('html, body').stop().animate({
 			scrollTop: $(window.location.hash).offset().top
 		}, 0);

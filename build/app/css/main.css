@@ -2034,6 +2034,7 @@ textarea {
   max-width: 390px;
   border-radius: 10px;
   overflow: hidden;
+  z-index: 0;
 }
 
 .card-views__display-slider .slick-dots {
