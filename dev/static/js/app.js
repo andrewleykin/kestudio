@@ -261,6 +261,10 @@
 			$(videoBlock).removeClass('active')
 			$(videoBlock).find('video').get(0).pause()
 			$(videoBlock).find('video').get(0).currentTime = 0
+			if (isMobile) {
+				$(videoBlock).closest('.card-views').find('.card-views__thumbs-video.photo').addClass('hide')
+				$(videoBlock).closest('.card-views').find('.card-views__thumbs-video.video').removeClass('hide')
+			}
 		}
 
 		const initSlider = (slug) => {
@@ -334,8 +338,6 @@
 
 			photoButton.click(function() {
 				closeVideo(videoBlock)
-				$(this).addClass('hide')
-				videoButton.removeClass('hide')
 			})
 
       videoEl.get(0).addEventListener('ended', function() {
