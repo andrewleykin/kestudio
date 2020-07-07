@@ -272,8 +272,9 @@
 			const videoBlock = openModal.find('.card-views__display-video')
 			const videoEl = videoBlock.find('video')
 			let videoShow = 0
+			
 
-			thumbEl.slick({
+			thumbEl.not('.slick-initialized').slick({
 				vertical: true,
 				slidesToShow: 4,
 				slidesToScroll: 1,
@@ -294,8 +295,8 @@
 					},
 				]
 			})
-
-			displayEl.slick({
+			
+			displayEl.not('.slick-initialized').slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				asNavFor: thumbEl,
@@ -341,7 +342,6 @@
 		const initRemodal = (slug) => {
 			const remodal = $(`[data-remodal-id=${slug}]`).remodal()
 			remodal.open()
-			initSlider(slug)
 		}
 
 		$('body').on('click', '.card-info__next', function(e) {
@@ -370,6 +370,10 @@
 			$('.card-views__display-video').each((index, item) => {
 				closeVideo(item)
 			})
+		});
+
+		$(document).on('opening', '.remodal', function (e) {
+    	initSlider($(e.currentTarget).data('remodalId'))
 		});
 	}
 
@@ -453,6 +457,11 @@
 		$('html, body').stop().animate({
 			scrollTop: $(window.location.hash).offset().top
 		}, 0);
+	}
+
+	if (window.location.hash && $(`[data-remodal-id=${window.location.hash.slice(1)}]`).length) {
+		const remodal = $(`[data-remodal-id=${window.location.hash.slice(1)}]`).remodal()
+		remodal.open()
 	}
 })();
 $(document).ready(function () {
