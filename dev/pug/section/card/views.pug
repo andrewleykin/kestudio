@@ -11,9 +11,12 @@
         img(src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 4")
       .card-views__thumbs-slide
         img(src="app/img/content/card-thumb.jpg" alt="Предпросмотр ИМЯ 5")
-    button.card-views__thumbs-video(type="button" aria-label="Включить видео ИМЯ")
+    button.card-views__thumbs-video.video(type="button" aria-label="Включить видео ИМЯ")
       +icon('play')
       span Видео
+    button.card-views__thumbs-video.photo.hide(type="button" aria-label="Включить фото ИМЯ")
+      +icon('photo')
+      span Фото
   .card-views__display
     span.card-views__display-text агентство: kestudio
     button.card-views__display-arrow.prev(type="button" aria-label="Предыдущее фото")

@@ -1505,6 +1505,10 @@ textarea {
   margin-top: 250px;
 }
 
+.index-about__block-info .btn {
+  margin-top: 50px;
+}
+
 .index-about__block-images {
   margin-right: 50px;
   display: -webkit-box;
@@ -1513,6 +1517,10 @@ textarea {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+}
+
+.index-about__block-images .btn {
+  display: none;
 }
 
 .index-about__block-image {
@@ -1977,6 +1985,17 @@ textarea {
   line-height: 120%;
   text-transform: uppercase;
   color: #4f4f4f;
+}
+
+.card-views__thumbs-video.hide {
+  display: none;
+}
+
+.card-views__thumbs-video.photo svg {
+  width: 20px;
+  height: 18px;
+  stroke: transparent;
+  fill: #4f4f4f;
 }
 
 .card-views__display {
@@ -3125,14 +3144,21 @@ textarea {
     margin-left: 22%;
   }
 
-  .index-about__block:nth-child(3) .index-about__block-image:nth-child(3),
-  .index-about__block:nth-child(3) .index-about__block-image:nth-child(4) {
-    margin-left: auto;
+  .index-about__block-info .btn {
+    display: none;
   }
 
   .index-about__block-images {
     display: block;
     margin-right: 0;
+  }
+
+  .index-about__block-images .btn {
+    margin: 50px auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 350px;
   }
 
   .index-about__block-image.small {
@@ -3208,6 +3234,10 @@ textarea {
   .index-advantages__info-item:last-child {
     max-width: 285px;
     margin-left: auto;
+  }
+
+  .index-advantages__info-item:first-child {
+    margin-right: -15px;
   }
 
   .index-advantages__info-item:nth-child(2) img,

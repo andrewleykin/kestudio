@@ -62,17 +62,27 @@
     &:nth-child(3)
       .index-about__block-image:nth-child(2)
         margin-left 22%
-      .index-about__block-image:nth-child(3),
-      .index-about__block-image:nth-child(4)
-        margin-left auto
+
+.index-about__block-info
+  .btn
+    margin-top 50px
+  @media (max-width breakpoint-md)
+    .btn
+      display none
 
 .index-about__block-images
   margin-right 50px
   display flex
   align-items flex-start
+  .btn
+    display none
   @media (max-width breakpoint-md)
     display block
     margin-right 0
+    .btn
+      margin 50px auto 0
+      display flex
+      max-width 350px
 
 .index-about__block-image
   max-width 300px

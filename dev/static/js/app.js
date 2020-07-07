@@ -268,7 +268,8 @@
 			const arrows = openModal.find('.card-views__display-arrow')
 			const thumbEl = openModal.find('.card-views__thumbs-slider')
 			const displayEl = openModal.find('.card-views__display-slider')
-			const videoButton = openModal.find('.card-views__thumbs-video')
+			const videoButton = openModal.find('.card-views__thumbs-video.video')
+			const photoButton = openModal.find('.card-views__thumbs-video.photo')
 			const videoBlock = openModal.find('.card-views__display-video')
 			const videoEl = videoBlock.find('video')
 			let videoShow = 0
@@ -322,9 +323,19 @@
 				}
 			});
 
-			videoButton.click(() => {
+			videoButton.click(function() {
 				videoBlock.addClass('active')
 				videoEl.get(0).play()
+				if (isMobile) {
+					$(this).addClass('hide')
+					photoButton.removeClass('hide')
+				}
+			})
+
+			photoButton.click(function() {
+				closeVideo(videoBlock)
+				$(this).addClass('hide')
+				videoButton.removeClass('hide')
 			})
 
       videoEl.get(0).addEventListener('ended', function() {
