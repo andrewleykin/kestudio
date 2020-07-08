@@ -24,6 +24,15 @@
       margin-bottom 100px
     .index-services__block-price
       margin-bottom 25px
+  &:nth-child(2)
+    .index-services__block-image
+      max-width 600px
+  &:nth-child(3)
+    .index-services__block-image
+      max-width 450px
+  &:nth-child(4)
+    .index-services__block-image
+      max-width 324px
   @media (max-width breakpoint-md)
     &:nth-child(2)
       .index-services__block-views
@@ -33,8 +42,9 @@
           display block
     &:nth-child(3)
       .index-services__block-image
+        max-width 270px
+        margin 0 auto
         img
-          margin-left auto
           display block
     &:nth-child(4)
       .index-services__block-views
@@ -97,7 +107,7 @@
   display block
   @media (max-width breakpoint-md)
     margin-bottom 25px
-    font-size 24px
+    font-size 33px
 
 .index-services__block-subprice
   font-size 14px

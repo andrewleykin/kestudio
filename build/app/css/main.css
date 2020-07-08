@@ -1718,6 +1718,18 @@ textarea {
   margin-bottom: 25px;
 }
 
+.index-services__block:nth-child(2) .index-services__block-image {
+  max-width: 600px;
+}
+
+.index-services__block:nth-child(3) .index-services__block-image {
+  max-width: 450px;
+}
+
+.index-services__block:nth-child(4) .index-services__block-image {
+  max-width: 324px;
+}
+
 .index-services__block-title {
   margin-bottom: 50px;
 }
@@ -3304,8 +3316,12 @@ textarea {
     display: block;
   }
 
+  .index-services__block:nth-child(3) .index-services__block-image {
+    max-width: 270px;
+    margin: 0 auto;
+  }
+
   .index-services__block:nth-child(3) .index-services__block-image img {
-    margin-left: auto;
     display: block;
   }
 
@@ -3353,7 +3369,7 @@ textarea {
 
   .index-services__block-price {
     margin-bottom: 25px;
-    font-size: 1.5rem;
+    font-size: 2.0625rem;
   }
 
   .index-services__block-subprice {

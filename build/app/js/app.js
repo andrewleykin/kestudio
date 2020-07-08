@@ -481,6 +481,10 @@
 		const remodal = $(`[data-remodal-id=${window.location.hash.slice(1)}]`).remodal()
 		remodal.open()
 	}
+
+	if ($('[data-zoomable]').length) {
+		mediumZoom('[data-zoomable]')
+	}
 })();
 $(document).ready(function () {
     svg4everybody({});
