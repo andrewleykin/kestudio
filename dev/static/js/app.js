@@ -279,7 +279,7 @@
 			let videoShow = 0
 			
 
-			thumbEl.not('.slick-initialized').slick({
+			thumbEl.slick({
 				vertical: true,
 				slidesToShow: 4,
 				slidesToScroll: 1,
@@ -301,7 +301,7 @@
 				]
 			})
 			
-			displayEl.not('.slick-initialized').slick({
+			displayEl.slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				asNavFor: thumbEl,
