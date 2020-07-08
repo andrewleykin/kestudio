@@ -279,7 +279,7 @@
 			let videoShow = 0
 			
 
-			thumbEl.slick({
+			thumbEl.not('.slick-initialized').slick({
 				vertical: true,
 				slidesToShow: 4,
 				slidesToScroll: 1,
@@ -301,7 +301,7 @@
 				]
 			})
 			
-			displayEl.slick({
+			displayEl.not('.slick-initialized').slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				asNavFor: thumbEl,
@@ -386,7 +386,12 @@
 		});
 
 		$(document).on('opening', '.remodal', function (e) {
-    	initSlider($(e.currentTarget).data('remodalId'))
+			let duration = 0
+			if (isMobile) duration = 100
+			
+    	setTimeout(() => {
+				initSlider($(e.currentTarget).data('remodalId'))
+			},duration)
 		});
 	}
 
