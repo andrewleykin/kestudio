@@ -1628,6 +1628,11 @@ textarea {
   display: none;
 }
 
+.index-advantages__info-image {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .index-advantages__images-row {
   display: -webkit-box;
   display: -ms-flexbox;
