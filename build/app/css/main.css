@@ -1706,6 +1706,10 @@ textarea {
   margin-left: auto;
 }
 
+.index-services__block .index-services__block-image {
+  max-width: 600px;
+}
+
 .index-services__block+.index-services__block {
   margin-top: 200px;
 }
@@ -1716,18 +1720,6 @@ textarea {
 
 .index-services__block--main .index-services__block-price {
   margin-bottom: 25px;
-}
-
-.index-services__block:nth-child(2) .index-services__block-image {
-  max-width: 600px;
-}
-
-.index-services__block:nth-child(3) .index-services__block-image {
-  max-width: 450px;
-}
-
-.index-services__block:nth-child(4) .index-services__block-image {
-  max-width: 324px;
 }
 
 .index-services__block-title {
