@@ -277,16 +277,15 @@
 			const videoBlock = openModal.find('.card-views__display-video')
 			const videoEl = videoBlock.find('video')
 			let videoShow = 0
-			
 
 			thumbEl.not('.slick-initialized').slick({
+				infinite: false,
 				vertical: true,
-				slidesToShow: 4,
+				slidesToShow: 5,
 				slidesToScroll: 1,
 				arrows: false,
 				asNavFor: displayEl,
 				focusOnSelect: true,
-				infinity: true,
 				responsive: [
 					{
 						breakpoint: 768,
@@ -302,10 +301,10 @@
 			})
 			
 			displayEl.not('.slick-initialized').slick({
+				infinite: false,
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				asNavFor: thumbEl,
-				infinity: true,
 				arrows: false,
 				responsive: [
 					{
@@ -374,6 +373,11 @@
 			const nextSlug = blocks.eq(nextIndex).data('name')
 			initRemodal(nextSlug)
 		});
+
+		$('body').on('click', '.card-info__btn', function(e) {
+			$(this).addClass('hide')
+			$(this).siblings('.card-info__actions-text').removeClass('hide')
+		})
 
 		$('.catalog-list').on('click', '.catalog-list-block', function(e) {
 			initRemodal($(e.currentTarget).data('name'))

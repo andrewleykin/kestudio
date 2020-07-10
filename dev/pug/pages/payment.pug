@@ -5,6 +5,7 @@ block variables
 
 block content
 	.payment-page
+		include ../section/payment/calculator
 		p.payment-page__text Сформировать счет или оплатить услуги студии:
 		.payment-page__actions
 			button.btn.payment-page__btn(type="button") Оплата картой
@@ -14,3 +15,6 @@ block content
 				include ../section/payment/human
 			.payment-page__tab
 				include ../section/payment/organization
+
+block script
+	script(src="https://cdn.jsdelivr.net/npm/vue")

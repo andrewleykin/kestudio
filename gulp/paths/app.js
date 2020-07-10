@@ -5,4 +5,5 @@ module.exports = [
   './dev/static/js/libs/svg4everybody.js',
   './dev/static/js/libs/wowjs.js',
   './dev/static/js/modules/validation.js',
+  './dev/static/js/modules/calculator.js',
 ];
