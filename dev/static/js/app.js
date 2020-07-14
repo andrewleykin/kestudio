@@ -281,7 +281,7 @@
 			thumbEl.not('.slick-initialized').slick({
 				infinite: false,
 				vertical: true,
-				slidesToShow: 5,
+				slidesToShow: 10,
 				slidesToScroll: 1,
 				arrows: false,
 				asNavFor: displayEl,
