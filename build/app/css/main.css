@@ -3516,6 +3516,7 @@ textarea {
     padding-top: 0;
     height: 100vh;
     min-height: 500px;
+    max-height: 654px;
   }
 
   .index-hero__video video {
