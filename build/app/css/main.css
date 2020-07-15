@@ -1633,6 +1633,7 @@ textarea {
   -ms-flex-item-align: center;
   align-self: center;
   letter-spacing: 0.05rem;
+  min-width: 67px;
 }
 
 .payment-calculator__item-close {
@@ -3496,6 +3497,7 @@ textarea {
     position: absolute;
     bottom: 5px;
     right: 20px;
+    min-width: auto;
   }
 
   .payment-calculator__item-close {
