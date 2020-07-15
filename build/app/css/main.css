@@ -2612,26 +2612,6 @@ textarea {
   padding: 20px;
 }
 
-.card-info__btn.hide {
-  display: none;
-}
-
-.card-info__actions-text {
-  height: 63px;
-}
-
-.card-info__actions-text.hide {
-  display: none;
-}
-
-.card-info__actions-text a {
-  text-decoration: underline;
-}
-
-.card-info__actions-text a:hover {
-  text-decoration: none;
-}
-
 .card-info__next {
   cursor: pointer;
   -webkit-transition: all 0.2s;
@@ -3376,6 +3356,10 @@ textarea {
     padding-bottom: 35px;
   }
 
+  .payment-page__wrap {
+    padding: 0 15px;
+  }
+
   .payment-page__text {
     font-size: 1.125rem;
     margin-bottom: 30px;
@@ -3408,6 +3392,15 @@ textarea {
 
   .payment-calculator {
     margin-bottom: 45px;
+  }
+
+  .payment-calculator h4 {
+    font-size: 1.25rem;
+  }
+
+  .payment-calculator h4.payment-calculator__total {
+    font-size: 1rem;
+    font-weight: normal;
   }
 
   .payment-calculator__title {
@@ -4059,16 +4052,20 @@ textarea {
     margin-bottom: 5px;
   }
 
-  .card-info__actions-text {
-    height: 56px;
-  }
-
   .card-info__next {
     display: none;
   }
 }
 
 @media (max-width: 480px) {
+  .payment-page__text {
+    text-align: left;
+  }
+
+  .payment-page__actions .btn {
+    max-width: 100%;
+  }
+
   .index-portfolio__slide {
     max-width: 155px;
   }

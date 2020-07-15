@@ -374,11 +374,6 @@
 			initRemodal(nextSlug)
 		});
 
-		$('body').on('click', '.card-info__btn', function(e) {
-			$(this).addClass('hide')
-			$(this).siblings('.card-info__actions-text').removeClass('hide')
-		})
-
 		$('.catalog-list').on('click', '.catalog-list-block', function(e) {
 			initRemodal($(e.currentTarget).data('name'))
 		});

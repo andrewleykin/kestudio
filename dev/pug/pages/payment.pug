@@ -6,10 +6,11 @@ block variables
 block content
 	.payment-page
 		include ../section/payment/calculator
-		p.payment-page__text Сформировать счет или оплатить услуги студии:
-		.payment-page__actions
-			button.btn.payment-page__btn(type="button") Оплата картой
-			button.btn.payment-page__btn(type="button") Сформировать счет для ЮЛ
+		.payment-page__wrap
+			p.payment-page__text Выберите удобный способ оплаты:
+			.payment-page__actions
+				button.btn.payment-page__btn(type="button") Оплата картой
+				button.btn.payment-page__btn(type="button") Сформировать счет для ЮЛ
 		.payment-page__tabs
 			.payment-page__tab
 				include ../section/payment/human

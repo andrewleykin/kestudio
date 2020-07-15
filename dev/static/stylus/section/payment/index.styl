@@ -5,6 +5,10 @@
     padding-top 40px
     padding-bottom 35px
 
+.payment-page__wrap
+  @media (max-width breakpoint-md)
+    padding 0 15px
+
 .payment-page__text
   text-align center
   margin-bottom 50px
@@ -15,6 +19,8 @@
   @media (max-width breakpoint-md)
     font-size 18px
     margin-bottom 30px
+  @media (max-width breakpoint-sm)
+    text-align left
 
 .payment-page__actions
   display flex
@@ -32,6 +38,9 @@
     .btn + .btn
       margin-left auto
       margin-top 20px
+  @media (max-width breakpoint-sm)
+    .btn
+      max-width 100%
 
 .payment-page__tabs
   padding-top 100px
