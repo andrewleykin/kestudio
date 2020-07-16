@@ -1100,7 +1100,7 @@ textarea {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: auto;
-  max-height: 360px;
+  max-height: 378px;
 }
 
 .catalog-list-block__image img {
@@ -2696,10 +2696,6 @@ textarea {
 
   .catalog-list__block {
     max-width: calc(33% - 20px);
-  }
-
-  .catalog-list-block__image {
-    max-height: 290px;
   }
 
   .index-hero {
