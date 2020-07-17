@@ -42,12 +42,16 @@
         bottom 80px
       .payment-calculator__item-price
         bottom 85px
+  @media (max-width 374px)
+    &.delivery
+      padding-bottom 80px
 
 .payment-calculator__item-photo
   margin-right 25px
   width 100%
   max-width 100px
   border-radius 10px
+  overflow hidden
   flex none
   &--icon
     border-radius 5px
@@ -66,6 +70,20 @@
       &.icon-360-icon
         width 64px
         height 33px
+  @media (max-width 374px)
+    max-width 75px
+    margin-right 10px
+    &--icon
+      height 100px
+      svg
+        width 25px
+        height 21px
+        &.icon-delivery-icon
+          width 35px
+          height 35px
+        &.icon-360-icon
+          width 44px
+          height 23px
 
 .payment-calculator__item-info
   margin-right auto
@@ -87,6 +105,10 @@
   max-width 250px
   span.name
     display block
+  @media (max-width breakpoint-md)
+    max-width 90%
+  @media (max-width 374px)
+    margin-bottom 5px
     
 .payment-calculator__item-desc
   font-size 14px
@@ -139,6 +161,8 @@
     bottom 0
     .form-group__input
       text-align center
+  @media (max-width 374px)
+    left 85px
 
 .payment-calculator__item-count
   width 115px
@@ -175,6 +199,8 @@
     .form-group__input
       height 30px
       text-align center
+  @media (max-width 374px)
+    left 85px
 
 .payment-calculator__item-price
   align-self center
@@ -185,6 +211,8 @@
     bottom 5px
     right 20px
     min-width auto
+  @media (max-width 374px)
+    right 5px
 
 .payment-calculator__item-close
   cursor pointer
