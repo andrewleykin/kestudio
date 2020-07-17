@@ -1400,6 +1400,14 @@ textarea {
   margin: 0 auto;
 }
 
+.payment-organization .payment-actions__btn {
+  margin: 0 auto;
+}
+
+.payment-organization .payment-actions__text {
+  text-align: center;
+}
+
 .payment-organization__title {
   margin-bottom: 100px;
 }
@@ -1676,6 +1684,48 @@ textarea {
 .payment-calculator__total-summ {
   display: block;
   margin-left: 25px;
+}
+
+.payment-actions {
+  margin-top: 60px;
+}
+
+.payment-actions__text {
+  margin-top: 20px;
+  font-size: 0.875rem;
+  line-height: 125%;
+  letter-spacing: 0.05rem;
+  color: #828282;
+}
+
+.payment-actions__text button {
+  color: #00f;
+  border-bottom: 1px solid #00f;
+  cursor: pointer;
+}
+
+.payment-actions__text button:hover {
+  border-bottom-color: transparent;
+}
+
+.payment-actions__modal {
+  text-align: left;
+}
+
+.payment-actions__modal-wrap h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.payment-actions__modal-wrap h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.payment-actions__modal-wrap p + p {
+  margin-top: 1em;
 }
 
 /* Стили страницы payment */
