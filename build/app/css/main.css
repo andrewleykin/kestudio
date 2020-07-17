@@ -2825,6 +2825,8 @@ textarea {
 
   .menu__link-group {
     margin-right: 0;
+    border-top: 1px solid #4f4f4f;
+    border-bottom: 1px solid #4f4f4f;
   }
 
   .menu__link {

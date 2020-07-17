@@ -259,6 +259,7 @@
 	if ($('.catalog-list').length) {
 		const closeVideo = (videoBlock) => {
 			$(videoBlock).removeClass('active')
+			$(videoBlock).find('video').get(0).setAttribute('src', '')
 			$(videoBlock).find('video').get(0).pause()
 			$(videoBlock).find('video').get(0).currentTime = 0
 			if (isMobile) {
@@ -276,6 +277,7 @@
 			const photoButton = openModal.find('.card-views__thumbs-video.photo')
 			const videoBlock = openModal.find('.card-views__display-video')
 			const videoEl = videoBlock.find('video')
+			const videoSrc = $(videoEl).data('video')
 			let videoShow = 0
 
 			thumbEl.not('.slick-initialized').slick({
@@ -328,6 +330,7 @@
 
 			videoButton.click(function() {
 				videoBlock.addClass('active')
+				videoEl.get(0).setAttribute('src', videoSrc)
 				videoEl.get(0).play()
 				if (isMobile) {
 					$(this).addClass('hide')
@@ -379,9 +382,14 @@
 		});
 
 		$(document).on('closed', '.remodal', function (e) {
-			$('.card-views__display-video').each((index, item) => {
-				closeVideo(item)
-			})
+			const currentModal = $(e.currentTarget)
+			const thumbEl = currentModal.find('.card-views__thumbs-slider')
+			const displayEl = currentModal.find('.card-views__display-slider') 
+      const currentVideo = currentModal.find('.card-views__display-video')
+
+			thumbEl.slick('unslick')
+			displayEl.slick('unslick')
+			closeVideo(currentVideo)
 		});
 
 		$(document).on('opening', '.remodal', function (e) {
