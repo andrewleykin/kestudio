@@ -232,8 +232,29 @@
 .payment-calculator__add
   max-width 620px 
   margin 0 auto 90px
+  .select-field__item
+    span
+      &:before
+        content: '| '
   @media (max-width breakpoint-md)
     margin-bottom 40px
+    .select-field__list
+      max-height 240px
+      padding-left 0
+      padding-top 10px
+    .select-field__item
+      flex-direction column
+      height auto
+      text-align center
+      span
+        display block
+        text-align right
+        &:before
+          display none
+    .select-field__item + .select-field__item
+      border-top 1px solid gray-6
+      margin-top 10px
+      padding-top 20px
 
 .payment-calculator__total
   display flex

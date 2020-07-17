@@ -1658,6 +1658,10 @@ textarea {
   margin: 0 auto 90px;
 }
 
+.payment-calculator__add .select-field__item span:before {
+  content: '| ';
+}
+
 .payment-calculator__total {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3511,6 +3515,36 @@ textarea {
 
   .payment-calculator__add {
     margin-bottom: 40px;
+  }
+
+  .payment-calculator__add .select-field__list {
+    max-height: 240px;
+    padding-left: 0;
+    padding-top: 10px;
+  }
+
+  .payment-calculator__add .select-field__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .payment-calculator__add .select-field__item span {
+    display: block;
+    text-align: right;
+  }
+
+  .payment-calculator__add .select-field__item span:before {
+    display: none;
+  }
+
+  .payment-calculator__add .select-field__item + .select-field__item {
+    border-top: 1px solid #f2f2f2;
+    margin-top: 10px;
+    padding-top: 20px;
   }
 
   .index-hero {
