@@ -97,7 +97,12 @@
                     </div>
                     <!-- В остальных услугах можно удалить этот блок-->
                     <div class="payment-calculator__item-sub">
-                      <input class="form-group__input" type="text" placeholder="Акт приема">
+                      <label class="payment-calculator__item-sub-add" for="calc-file-add">
+                        <svg class="icon icon-file-add ">
+                          <use xlink:href="app/img/svg/symbol/sprite.svg#file-add"></use>
+                        </svg><span>Акт приема</span>
+                      </label>
+                      <input class="payment-calculator__item-sub-input" type="file" placeholder="Акт приема" id="calc-file-add">
                       <input class="form-group__input" type="text" placeholder="Акт возврата">
                     </div>
                     <div class="payment-calculator__item-count">

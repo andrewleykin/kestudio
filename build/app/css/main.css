@@ -1585,6 +1585,30 @@ textarea {
   margin-top: 10px;
 }
 
+.payment-calculator__item-sub-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.payment-calculator__item-sub-add svg {
+  width: 18px;
+  height: 18px;
+  fill: #9b9b9b;
+  margin-right: 8px;
+}
+
+.payment-calculator__item-sub-add span {
+  color: #bdbdbd;
+  letter-spacing: 0.05rem;
+}
+
+.payment-calculator__item-sub-input {
+  display: none;
+}
+
 .payment-calculator__item-count {
   width: 115px;
   margin-right: 25px;
