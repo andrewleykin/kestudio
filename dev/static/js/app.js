@@ -282,6 +282,7 @@
 
 			thumbEl.not('.slick-initialized').slick({
 				infinite: false,
+				lazyLoad: 'ondemand',
 				vertical: true,
 				slidesToShow: 10,
 				slidesToScroll: 1,
@@ -304,6 +305,7 @@
 			
 			displayEl.not('.slick-initialized').slick({
 				infinite: false,
+				lazyLoad: 'ondemand',
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				asNavFor: thumbEl,
@@ -399,9 +401,9 @@
 			},duration)
 		});
 
-		$(document).on('opened', '.remodal', function (e) {
-			$(e.currentTarget).remodal().reload();
-		});
+		// $(document).on('opened', '.remodal', function (e) {
+		// 	$(e.currentTarget).remodal().reload();
+		// });
 	}
 
 	if ($('[data-toggle="datepicker"]').length) {
