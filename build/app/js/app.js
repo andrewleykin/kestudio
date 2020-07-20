@@ -361,8 +361,6 @@
 
 		$('body').on('click', '.card-info__next', function(e) {
 			const currentSlug = $(e.currentTarget).closest('.card-modal').data('remodal-id')
-			const currentBlock = $(`[data-name="${currentSlug}"]`)[0]
-			const nextBlock = $(currentBlock).closest('.catalog-list__block').next()
 			const blocks = $('.catalog-list-block')
 			let searchIndex = null
 
@@ -399,6 +397,10 @@
     	setTimeout(() => {
 				initSlider($(e.currentTarget).data('remodalId'))
 			},duration)
+		});
+
+		$(document).on('opened', '.remodal', function (e) {
+			$(e.currentTarget).remodal().reload();
 		});
 	}
 
