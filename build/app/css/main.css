@@ -2380,6 +2380,8 @@ textarea {
   position: relative;
   -ms-flex-item-align: start;
   align-self: flex-start;
+  max-height: 480px;
+  overflow: hidden;
 }
 
 .card-views__display-text {
@@ -2797,6 +2799,10 @@ textarea {
 
   .card-views {
     max-width: 380px;
+  }
+
+  .card-views__display {
+    max-height: 400px;
   }
 
   .card-views__display-slider {
@@ -4037,6 +4043,7 @@ textarea {
 
   .card-views__display {
     max-width: 100%;
+    max-height: auto;
   }
 
   .card-views__display-text {

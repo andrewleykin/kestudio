@@ -102,8 +102,13 @@
 .card-views__display
   position relative
   align-self flex-start
+  max-height 480px
+  overflow hidden
+  @media (max-width breakpoint-lg)
+    max-height 400px
   @media (max-width breakpoint-md)
     max-width 100%
+    max-height auto
 
 .card-views__display-text
   position absolute
