@@ -363,17 +363,16 @@
 
 		$('body').on('click', '.card-info__next', function(e) {
 			const currentSlug = $(e.currentTarget).closest('.card-modal').data('remodal-id')
-			const blocks = $('.catalog-list-block')
 			let searchIndex = null
 
-			blocks.each((index, item) => {
+			$('.catalog-list-block').each((index, item) => {
 				if ($(item).data('name') === currentSlug && searchIndex === null) {
 					searchIndex = index
 				}
 			})
-			const nextIndex = searchIndex + 1 < blocks.length ? searchIndex + 1 : 0
+			const nextIndex = searchIndex + 1 < $('.catalog-list-block').length ? searchIndex + 1 : 0
 			
-			const nextSlug = blocks.eq(nextIndex).data('name')
+			const nextSlug = $('.catalog-list-block').eq(nextIndex).data('name')
 			initRemodal(nextSlug)
 		});
 
