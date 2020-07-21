@@ -403,7 +403,7 @@
 			if (isMobile) duration = 100
 			
     	setTimeout(() => {
-				initSlider($(e.currentTarget).attr('id'))
+				if (id !== 'contact-modal') initSlider($(e.currentTarget).attr('id'))
 			},duration)
 			window.location.href = window.location.origin + window.location.pathname + '#' + $(e.currentTarget).attr('id')
 			setTimeout(() => {

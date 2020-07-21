@@ -2736,6 +2736,7 @@ textarea {
   }
 
   .card-modal {
+    width: 100%;
     max-width: 100%;
     padding: 45px 20px;
   }
@@ -2852,6 +2853,10 @@ textarea {
 
   .main.not-paddding-top {
     padding-top: 0;
+  }
+
+  .blocker {
+    padding: 0;
   }
 
   .btn {
