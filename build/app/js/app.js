@@ -360,10 +360,10 @@
 			$(slug).modal()
 		}
 
-		let isNextClick = false
+		// let isNextClick = false
 
 		$('body').on('click', '.card-info__next', function(e) {
-			isNextClick = true
+			// isNextClick = true
 			e.stopPropagation()
 			const currentSlug = $(e.currentTarget).closest('.card-modal').attr('id')
 			let searchIndex = null
@@ -380,22 +380,19 @@
 		});
 
 		$(document).on('modal:after-close', '.modal', function (e) {
-			const currentModal = $(e.currentTarget)
-			const thumbEl = currentModal.find('.card-views__thumbs-slider')
-			const displayEl = currentModal.find('.card-views__display-slider') 
-			const currentVideo = currentModal.find('.card-views__display-video')
-			
-			thumbEl.slick('unslick')
-			displayEl.slick('unslick')
-			closeVideo(currentVideo)
-
-			setTimeout(() => {
-				if (!isNextClick) {
-					const scrollSize = $(window).scrollTop()
-					window.location.hash = ''
-					$(window).scrollTop(scrollSize)
-				}
-			},0)
+			if ($(e.currentTarget).attr('id') !== 'contact-modal') {
+				const currentModal = $(e.currentTarget)
+				const thumbEl = currentModal.find('.card-views__thumbs-slider')
+				const displayEl = currentModal.find('.card-views__display-slider') 
+				const currentVideo = currentModal.find('.card-views__display-video')
+				
+				thumbEl.slick('unslick')
+				displayEl.slick('unslick')
+				closeVideo(currentVideo)
+			}
+			const scrollSize = $(window).scrollTop()
+			window.location.hash = ''
+			$(window).scrollTop(scrollSize)
 		});
 
 		$(document).on('modal:open', '.modal', function (e) {
@@ -405,11 +402,8 @@
 			
     	setTimeout(() => {
 				if (id !== 'contact-modal') initSlider(id)
+				window.location.href = window.location.origin + window.location.pathname + '#' + id
 			},duration)
-			window.location.href = window.location.origin + window.location.pathname + '#' + id
-			setTimeout(() => {
-				isNextClick = false
-			}, 100)
 		});
 	}
 
@@ -510,7 +504,10 @@
       return false;
 		});
 		
-		if (window.location.hash) $(window.location.hash).modal()
+		if (
+			(window.location.hash && window.location.pathname !== '/') || 
+			window.location.hash === '#contact-modal'
+		) $(window.location.hash).modal()
   });
 })();
 $(document).ready(function () {

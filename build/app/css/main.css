@@ -4060,8 +4060,8 @@ textarea {
 
   .card-views__display {
     width: 100%;
-    min-height: 640px;
-    max-height: 640px;
+    min-height: 525px;
+    max-height: 525px;
   }
 
   .card-views__display-text {
@@ -4208,8 +4208,8 @@ textarea {
   }
 
   .card-views__display {
-    min-height: 500px;
-    max-height: 500px;
+    min-height: 505px;
+    max-height: 505px;
   }
 
   .card-views__display-slider {
