@@ -399,13 +399,14 @@
 		});
 
 		$(document).on('modal:open', '.modal', function (e) {
+			const id = $(e.currentTarget).attr('id')
 			let duration = 0
 			if (isMobile) duration = 100
 			
     	setTimeout(() => {
-				if (id !== 'contact-modal') initSlider($(e.currentTarget).attr('id'))
+				if (id !== 'contact-modal') initSlider(id)
 			},duration)
-			window.location.href = window.location.origin + window.location.pathname + '#' + $(e.currentTarget).attr('id')
+			window.location.href = window.location.origin + window.location.pathname + '#' + id
 			setTimeout(() => {
 				isNextClick = false
 			}, 100)
