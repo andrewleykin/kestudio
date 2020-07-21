@@ -4042,8 +4042,8 @@ textarea {
   }
 
   .card-views__display {
-    max-width: 100%;
-    max-height: auto;
+    width: 100%;
+    max-height: 640px;
   }
 
   .card-views__display-text {
@@ -4058,7 +4058,7 @@ textarea {
   }
 
   .card-views__display-slider {
-    max-width: 100%;
+    max-width: 480px;
     border-radius: 0;
   }
 
@@ -4187,6 +4187,14 @@ textarea {
   .index-portfolio__slide {
     max-width: 155px;
   }
+
+  .card-views__display {
+    max-height: 500px;
+  }
+
+  .card-views__display-slider {
+    max-width: 375px;
+  }
 }
 
 @media (max-width: 374px) {
@@ -4238,5 +4246,9 @@ textarea {
 @media (max-width: 320px) {
   .range-field__reset {
     right: 10px;
+  }
+
+  .card-views__display {
+    max-height: 430px;
   }
 }
