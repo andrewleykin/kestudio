@@ -102,16 +102,19 @@
 .card-views__display
   position relative
   align-self flex-start
-  max-height 480px
+  max-height 525px
   overflow hidden
   @media (max-width breakpoint-lg)
     max-height 400px
   @media (max-width breakpoint-md)
     width 100%
+    min-height 640px
     max-height 640px
   @media (max-width breakpoint-sm)
+    min-height 500px
     max-height 500px
   @media (max-width breakpoint-ssm)
+    min-height 430px
     max-height 430px
 
 .card-views__display-text
@@ -178,6 +181,7 @@
   @media (max-width breakpoint-md)
     max-width 480px
     border-radius 0
+    margin 0 auto
   @media (max-width breakpoint-sm)
     max-width 375px
     

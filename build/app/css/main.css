@@ -2392,7 +2392,7 @@ textarea {
   position: relative;
   -ms-flex-item-align: start;
   align-self: flex-start;
-  max-height: 480px;
+  max-height: 525px;
   overflow: hidden;
 }
 
@@ -4060,6 +4060,7 @@ textarea {
 
   .card-views__display {
     width: 100%;
+    min-height: 640px;
     max-height: 640px;
   }
 
@@ -4077,6 +4078,7 @@ textarea {
   .card-views__display-slider {
     max-width: 480px;
     border-radius: 0;
+    margin: 0 auto;
   }
 
   .card-views__display-slide img {
@@ -4206,6 +4208,7 @@ textarea {
   }
 
   .card-views__display {
+    min-height: 500px;
     max-height: 500px;
   }
 
@@ -4266,6 +4269,7 @@ textarea {
   }
 
   .card-views__display {
+    min-height: 430px;
     max-height: 430px;
   }
 }
