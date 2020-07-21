@@ -357,8 +357,12 @@
 		}
 
 		const initRemodal = (slug) => {
-			$(slug).modal()
+			$(`#${slug}`).modal()
 		}
+
+		$('body').on('click', '.catalog-list-block', function(e) {
+			initRemodal($(e.currentTarget).data('modal-id'))
+		})
 
 		// let isNextClick = false
 
@@ -369,13 +373,13 @@
 			let searchIndex = null
 
 			$('.catalog-list-block').each((index, item) => {
-				if ($(item).data('modal').slice(1) === currentSlug && searchIndex === null) {
+				if ($(item).data('modal-id') === currentSlug && searchIndex === null) {
 					searchIndex = index
 				}
 			})
 			const nextIndex = searchIndex + 1 < $('.catalog-list-block').length ? searchIndex + 1 : 0
 			
-			const nextSlug = $('.catalog-list-block').eq(nextIndex).data('modal')
+			const nextSlug = $('.catalog-list-block').eq(nextIndex).data('modal-id')
 			initRemodal(nextSlug)
 		});
 
