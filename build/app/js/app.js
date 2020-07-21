@@ -392,7 +392,7 @@
 			closeVideo(currentVideo)
 		});
 
-		$(document).on('opening', '.remodal', function (e) {
+		$(document).on('opened', '.remodal', function (e) {
 			let duration = 0
 			if (isMobile) duration = 100
 			
