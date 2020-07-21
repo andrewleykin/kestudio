@@ -32,17 +32,15 @@
               <div class="header__menu">
                 <nav class="menu"><a class="menu__link js-scroll-to" href="#about">О студии</a><a class="menu__link js-scroll-to" href="#services">Услуги</a><a class="menu__link active" href="catalog.html">Модели</a><a class="menu__link" href="become.html">Стать моделью</a>
                   <div class="menu__link-group"><a class="menu__link" href="payment.html">Оплата</a><span class="menu__link-count">1</span></div>
-                  <button class="menu__link" type="button" data-remodal-target="contact-modal">Контакты</button>
+                  <button class="menu__link" type="button" data-modal="#contact-modal">Контакты</button>
                 </nav>
               </div>
             </div>
           </div>
-          <div class="contact-modal remodal" data-remodal-id="contact-modal">
-            <button class="modal-close" type="button" aria-label="Закрыть карточку" data-remodal-action="close">
+          <div class="contact-modal modal" id="contact-modal"><a class="modal-close" href="#close" aria-label="Закрыть карточку" rel="modal:close">
               <svg class="icon icon-close-modal ">
                 <use xlink:href="app/img/svg/symbol/sprite.svg#close-modal"></use>
-              </svg>
-            </button>
+              </svg></a>
             <div class="contact-modal__wrap">
               <div class="contact-modal__info"><span class="contact-modal__info-legend">Мы располагаемся по адресу:</span>
                 <h1 class="contact-modal__info-title contact-modal__info-title--address">г. Иннополис, ул. Спортивная, д. 104</h1><span class="contact-modal__info-legend">по всем вопросам</span>
@@ -247,12 +245,12 @@
               <div class="container"><span class="catalog-list__all">550 моделей по вашему запросу</span>
                 <div class="catalog-list__blocks">
                   <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug">
+                    <div class="catalog-list-block" data-modal="#name_slug">
                       <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
                     </div>
-                    <div class="card-modal" data-remodal-id="name_slug">
+                    <div class="card-modal modal" id="name_slug">
                       <div class="card-modal__wrap">
                         <div class="card-views">
                           <div class="card-views__thumbs">
@@ -301,12 +299,10 @@
                             </div>
                           </div>
                         </div>
-                        <div class="card-info">
-                          <button class="card-info__close modal-close" type="button" aria-label="Закрыть карточку" data-remodal-action="close">
+                        <div class="card-info"><a class="card-info__close modal-close" href="#close" aria-label="Закрыть карточку" rel="modal:close">
                             <svg class="icon icon-close-modal ">
                               <use xlink:href="app/img/svg/symbol/sprite.svg#close-modal"></use>
-                            </svg>
-                          </button>
+                            </svg></a>
                           <h1 class="card-info__name">Яков Зорянкин</h1>
                           <div class="card-info__wrap">
                             <div class="card-info__header">
@@ -345,12 +341,12 @@
                     </div>
                   </div>
                   <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug2">
+                    <div class="catalog-list-block" data-modal="#name_slug2">
                       <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
                     </div>
-                    <div class="card-modal" data-remodal-id="name_slug2">
+                    <div class="card-modal modal" id="name_slug2">
                       <div class="card-modal__wrap">
                         <div class="card-views">
                           <div class="card-views__thumbs">
@@ -399,12 +395,10 @@
                             </div>
                           </div>
                         </div>
-                        <div class="card-info">
-                          <button class="card-info__close modal-close" type="button" aria-label="Закрыть карточку" data-remodal-action="close">
+                        <div class="card-info"><a class="card-info__close modal-close" href="#close" aria-label="Закрыть карточку" rel="modal:close">
                             <svg class="icon icon-close-modal ">
                               <use xlink:href="app/img/svg/symbol/sprite.svg#close-modal"></use>
-                            </svg>
-                          </button>
+                            </svg></a>
                           <h1 class="card-info__name">Яков Зорянкин</h1>
                           <div class="card-info__wrap">
                             <div class="card-info__header">
@@ -443,12 +437,12 @@
                     </div>
                   </div>
                   <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug3">
+                    <div class="catalog-list-block" data-modal="#name_slug3">
                       <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
                     </div>
-                    <div class="card-modal" data-remodal-id="name_slug3">
+                    <div class="card-modal modal" id="name_slug3">
                       <div class="card-modal__wrap">
                         <div class="card-views">
                           <div class="card-views__thumbs">
@@ -497,12 +491,10 @@
                             </div>
                           </div>
                         </div>
-                        <div class="card-info">
-                          <button class="card-info__close modal-close" type="button" aria-label="Закрыть карточку" data-remodal-action="close">
+                        <div class="card-info"><a class="card-info__close modal-close" href="#close" aria-label="Закрыть карточку" rel="modal:close">
                             <svg class="icon icon-close-modal ">
                               <use xlink:href="app/img/svg/symbol/sprite.svg#close-modal"></use>
-                            </svg>
-                          </button>
+                            </svg></a>
                           <h1 class="card-info__name">Яков Зорянкин</h1>
                           <div class="card-info__wrap">
                             <div class="card-info__header">
@@ -541,12 +533,12 @@
                     </div>
                   </div>
                   <div class="catalog-list__block">
-                    <div class="catalog-list-block" data-name="name_slug4">
+                    <div class="catalog-list-block" data-modal="#name_slug4">
                       <div class="catalog-list-block__image"><img src="app/img/content/catalog-list.jpg" alt="имя"></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__name">Андрей</span><span class="catalog-list-block__expirience">опыт 3 года</span></div>
                       <div class="catalog-list-block__row"><span class="catalog-list-block__price">1 999<i class="rouble-icon"></i></span><span class="catalog-list-block__age">25 лет</span></div>
                     </div>
-                    <div class="card-modal" data-remodal-id="name_slug4">
+                    <div class="card-modal modal" id="name_slug4">
                       <div class="card-modal__wrap">
                         <div class="card-views">
                           <div class="card-views__thumbs">
@@ -595,12 +587,10 @@
                             </div>
                           </div>
                         </div>
-                        <div class="card-info">
-                          <button class="card-info__close modal-close" type="button" aria-label="Закрыть карточку" data-remodal-action="close">
+                        <div class="card-info"><a class="card-info__close modal-close" href="#close" aria-label="Закрыть карточку" rel="modal:close">
                             <svg class="icon icon-close-modal ">
                               <use xlink:href="app/img/svg/symbol/sprite.svg#close-modal"></use>
-                            </svg>
-                          </button>
+                            </svg></a>
                           <h1 class="card-info__name">Яков Зорянкин</h1>
                           <div class="card-info__wrap">
                             <div class="card-info__header">

@@ -129,6 +129,18 @@ textarea {
   flex: 1;
 }
 
+.blocker {
+  z-index: 100;
+}
+
+.blocker .modal {
+  border-radius: 0;
+}
+
+.blocker .modal a.close-modal {
+  display: none;
+}
+
 .btn {
   cursor: pointer;
   display: -webkit-box;

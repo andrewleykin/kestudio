@@ -32,17 +32,15 @@
               <div class="header__menu">
                 <nav class="menu"><a class="menu__link js-scroll-to" href="#about">О студии</a><a class="menu__link js-scroll-to" href="#services">Услуги</a><a class="menu__link active" href="catalog.html">Модели</a><a class="menu__link" href="become.html">Стать моделью</a>
                   <div class="menu__link-group"><a class="menu__link" href="payment.html">Оплата</a><span class="menu__link-count">1</span></div>
-                  <button class="menu__link" type="button" data-remodal-target="contact-modal">Контакты</button>
+                  <button class="menu__link" type="button" data-modal="#contact-modal">Контакты</button>
                 </nav>
               </div>
             </div>
           </div>
-          <div class="contact-modal remodal" data-remodal-id="contact-modal">
-            <button class="modal-close" type="button" aria-label="Закрыть карточку" data-remodal-action="close">
+          <div class="contact-modal modal" id="contact-modal"><a class="modal-close" href="#close" aria-label="Закрыть карточку" rel="modal:close">
               <svg class="icon icon-close-modal ">
                 <use xlink:href="app/img/svg/symbol/sprite.svg#close-modal"></use>
-              </svg>
-            </button>
+              </svg></a>
             <div class="contact-modal__wrap">
               <div class="contact-modal__info"><span class="contact-modal__info-legend">Мы располагаемся по адресу:</span>
                 <h1 class="contact-modal__info-title contact-modal__info-title--address">г. Иннополис, ул. Спортивная, д. 104</h1><span class="contact-modal__info-legend">по всем вопросам</span>

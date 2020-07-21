@@ -3855,6 +3855,11 @@ jquery-mask-plugin@^1.14.16:
   resolved "https://registry.yarnpkg.com/jquery-mask-plugin/-/jquery-mask-plugin-1.14.16.tgz#9ebb55947d984da5aade45315b2fe6b113e28aae"
   integrity sha512-reywdHlYEkPbzWjTpcc1fk9XQ3PLvO5dzEAVqy8zI7NTF22tB1HbeU3iboZTLdkBEPaWAqeI2HtEjsGQ4roZKw==
 
+jquery-modal@^0.9.2:
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/jquery-modal/-/jquery-modal-0.9.2.tgz#dbc046ec93440c46466fa8e21a6fc38c102a3ded"
+  integrity sha512-Bx6jTBuiUbdywriWd0UAZK9v7FKEDCOD5uRh47qd4coGvx+dG4w8cOGe4TG2OoR1dNrXn6Aqaeu8MAA+Oz7vOw==
+
 jquery@*, jquery@^3.2.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"

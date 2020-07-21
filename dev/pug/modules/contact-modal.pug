@@ -1,5 +1,5 @@
-.contact-modal.remodal(data-remodal-id="contact-modal")
-  button.modal-close(type="button" aria-label="Закрыть карточку" data-remodal-action="close")
+.contact-modal.modal(id="contact-modal")
+  a.modal-close(href="#close" aria-label="Закрыть карточку" rel="modal:close")
     +icon('close-modal')
   .contact-modal__wrap
     .contact-modal__info

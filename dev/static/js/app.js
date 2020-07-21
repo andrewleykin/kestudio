@@ -269,7 +269,7 @@
 		}
 
 		const initSlider = (slug) => {
-			const openModal = $(`[data-remodal-id=${slug}]`)
+			const openModal = $(`#${slug}`)
 			const arrows = openModal.find('.card-views__display-arrow')
 			const thumbEl = openModal.find('.card-views__thumbs-slider')
 			const displayEl = openModal.find('.card-views__display-slider')
@@ -357,52 +357,59 @@
 		}
 
 		const initRemodal = (slug) => {
-			const remodal = $(`[data-remodal-id=${slug}]`).remodal()
-			remodal.open()
+			$(slug).modal()
 		}
 
+		let isNextClick = false
+
 		$('body').on('click', '.card-info__next', function(e) {
-			const currentSlug = $(e.currentTarget).closest('.card-modal').data('remodal-id')
+			isNextClick = true
+			e.stopPropagation()
+			const currentSlug = $(e.currentTarget).closest('.card-modal').attr('id')
 			let searchIndex = null
 
 			$('.catalog-list-block').each((index, item) => {
-				if ($(item).data('name') === currentSlug && searchIndex === null) {
+				if ($(item).data('modal').slice(1) === currentSlug && searchIndex === null) {
 					searchIndex = index
 				}
 			})
 			const nextIndex = searchIndex + 1 < $('.catalog-list-block').length ? searchIndex + 1 : 0
 			
-			const nextSlug = $('.catalog-list-block').eq(nextIndex).data('name')
+			const nextSlug = $('.catalog-list-block').eq(nextIndex).data('modal')
 			initRemodal(nextSlug)
 		});
 
-		$('.catalog-list').on('click', '.catalog-list-block', function(e) {
-			initRemodal($(e.currentTarget).data('name'))
-		});
-
-		$(document).on('closed', '.remodal', function (e) {
+		$(document).on('modal:after-close', '.modal', function (e) {
 			const currentModal = $(e.currentTarget)
 			const thumbEl = currentModal.find('.card-views__thumbs-slider')
 			const displayEl = currentModal.find('.card-views__display-slider') 
-      const currentVideo = currentModal.find('.card-views__display-video')
-
+			const currentVideo = currentModal.find('.card-views__display-video')
+			
 			thumbEl.slick('unslick')
 			displayEl.slick('unslick')
 			closeVideo(currentVideo)
+
+			setTimeout(() => {
+				if (!isNextClick) {
+					const scrollSize = $(window).scrollTop()
+					window.location.hash = ''
+					$(window).scrollTop(scrollSize)
+				}
+			},0)
 		});
 
-		$(document).on('opened', '.remodal', function (e) {
+		$(document).on('modal:open', '.modal', function (e) {
 			let duration = 0
 			if (isMobile) duration = 100
 			
     	setTimeout(() => {
-				initSlider($(e.currentTarget).data('remodalId'))
+				initSlider($(e.currentTarget).attr('id'))
 			},duration)
+			window.location.href = window.location.origin + window.location.pathname + '#' + $(e.currentTarget).attr('id')
+			setTimeout(() => {
+				isNextClick = false
+			}, 100)
 		});
-
-		// $(document).on('opened', '.remodal', function (e) {
-		// 	$(e.currentTarget).remodal().reload();
-		// });
 	}
 
 	if ($('[data-toggle="datepicker"]').length) {
@@ -495,4 +502,13 @@
 	if ($('[data-zoomable]').length) {
 		mediumZoom('[data-zoomable]')
 	}
+
+	$(function() {
+    $('[data-modal]').on('click', function() {
+      $($(this).data('modal')).modal();
+      return false;
+		});
+		
+		if (window.location.hash) $(window.location.hash).modal()
+  });
 })();
