@@ -2333,6 +2333,7 @@ textarea {
   width: 60px;
   min-height: 80px;
   background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -2487,6 +2488,11 @@ textarea {
 
 .card-views__display-slider .slick-dots li + li {
   margin-left: 14px;
+}
+
+.card-views__display-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card-views__display-video {
@@ -4091,11 +4097,6 @@ textarea {
   .card-views__display-slider {
     max-width: 100%;
     border-radius: 0;
-  }
-
-  .card-views__display-slide {
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .card-info {
