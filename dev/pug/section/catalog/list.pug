@@ -2,18 +2,22 @@ section.catalog-list
   .container
     span.catalog-list__all 550 моделей по вашему запросу
     .catalog-list__blocks
-      .catalog-list__block
-        include ./block
-        include ../card/modal
-      .catalog-list__block
-        include ./block2
-        include ../card/modal2
-      .catalog-list__block
-        include ./block3
-        include ../card/modal3
-      .catalog-list__block
-        include ./block4
-        include ../card/modal4
+      each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+        .catalog-list__block
+          .catalog-list-block(data-modal-id="name_slug" + val)
+            .catalog-list-block__image
+              img(src="app/img/content/catalog-list.jpg" alt="имя")
+            .catalog-list-block__row
+              span.catalog-list-block__name Андрей
+              span.catalog-list-block__expirience опыт 3 года
+            .catalog-list-block__row
+              span.catalog-list-block__price 1 999
+                i.rouble-icon
+              span.catalog-list-block__age 25 лет
+          .card-modal.modal(id="name_slug" + val)
+            .card-modal__wrap
+              include ../card/views
+              include ../card/info
     span.catalog-list__views Показаны 20 из 575 моделей
     button.catalog-list__btn.btn 
       span Показать еще

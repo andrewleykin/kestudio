@@ -357,6 +357,7 @@
 		}
 
 		const initRemodal = (slug) => {
+      console.log("initRemodal -> slug", slug)
 			$(`#${slug}`).modal()
 		}
 
