@@ -49,6 +49,24 @@ section#calculator.payment-calculator
         // добавить класс .hide для скрытия
         button.payment-calculator__item-close(type="button" aria-label="Удалить")
           +icon('close-modal')
+      .payment-calculator__item
+        .payment-calculator__item-photo.payment-calculator__item-photo--icon
+          // delivery-icon | photo-icon | retush-icon | 360-icon
+          +icon('photo-icon')
+        .payment-calculator__item-info
+          h5.payment-calculator__item-title Модельная и предметная сьемка
+          p.payment-calculator__item-desc.payment-calculator__item-desc--auto
+            span.title цена за товар 
+            span.price 10 <i class="rouble-icon"></i>
+        // В остальных услугах можно удалить этот блок
+        .payment-calculator__item-sub
+          input.form-group__input(type="text" placeholder="Google Диск")
+        .payment-calculator__item-count
+          input.form-group__input(type="text" placeholder="Количество")
+        span.payment-calculator__item-price 10000 <i class="rouble-icon"></i>
+        // добавить класс .hide для скрытия
+        button.payment-calculator__item-close(type="button" aria-label="Удалить")
+          +icon('close-modal')
     .payment-calculator__add
       .form-group
         span.form-group__label Добавить услугу

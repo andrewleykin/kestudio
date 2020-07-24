@@ -1621,6 +1621,12 @@ textarea {
   display: none;
 }
 
+.payment-calculator__item-sub-google {
+  font-size: 0.875rem;
+  color: #bdbdbd;
+  margin-bottom: 5px;
+}
+
 .payment-calculator__item-count {
   width: 115px;
   margin-right: 25px;
