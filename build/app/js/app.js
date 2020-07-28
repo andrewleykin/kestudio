@@ -447,9 +447,42 @@
 	}
 
 	if ($('.payment-page').length) {
+
+		$('.payment-calculator').on('change keyup', '.js-text-input', function () {
+			$(this).removeClass('invalid')
+			if ($(this).val().length === 0) {
+				$(this).addClass('invalid')
+			}
+		});
+
+		$('.payment-calculator').on('change', '.js-file-input', function () {
+			$(this).siblings('.payment-calculator__item-sub-add').removeClass('invalid')
+		});
+
+		const validateCalc = () => {
+			let isValid = true
+
+			$('.js-text-input').each((index, item) => {
+				if ($(item).val().length === 0) {
+					$(item).addClass('invalid')
+					isValid = false
+				}
+			})
+
+			if ($('.payment-calculator__item-sub-add span').text() !== 'Акт приема загружен') {
+				$('.js-file-input').siblings('.payment-calculator__item-sub-add').addClass('invalid')
+				isValid = false
+			}
+			
+			return isValid
+		}
+
 		$('.payment-page__btn').click((e) => {
-			$(e.target).addClass('active').siblings().removeClass('active')
-			$('.payment-page__tab').eq($(e.target).index()).addClass('active').siblings().removeClass('active')
+			let isValidCalc = validateCalc()
+			if (isValidCalc) {
+				$(e.target).addClass('active').siblings().removeClass('active')
+				$('.payment-page__tab').eq($(e.target).index()).addClass('active').siblings().removeClass('active')
+			}
 		})
 	}
 

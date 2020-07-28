@@ -549,6 +549,10 @@ textarea {
   font-family: -apple-system, 'Roboto', Arial, sans-serif;
 }
 
+.form-group__input.invalid {
+  border-color: #eb5757;
+}
+
 .form-group__checkbox {
   display: none;
 }
@@ -1615,6 +1619,14 @@ textarea {
 .payment-calculator__item-sub-add span {
   color: #bdbdbd;
   letter-spacing: 0.05rem;
+}
+
+.payment-calculator__item-sub-add.invalid svg {
+  fill: #eb5757;
+}
+
+.payment-calculator__item-sub-add.invalid span {
+  color: #eb5757;
 }
 
 .payment-calculator__item-sub-input {

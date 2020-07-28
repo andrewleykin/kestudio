@@ -41,8 +41,8 @@ section#calculator.payment-calculator
           label.payment-calculator__item-sub-add(for="calc-file-add")
             +icon('file-add')
             span Акт приема
-          input.payment-calculator__item-sub-input(type="file" placeholder="Акт приема" id="calc-file-add")
-          input.form-group__input(type="text" placeholder="Акт возврата")
+          input.payment-calculator__item-sub-input.js-file-input(type="file" placeholder="Акт приема" id="calc-file-add")
+          input.form-group__input.js-text-input(type="text" placeholder="Акт возврата")
         .payment-calculator__item-count
           input.form-group__input(type="text" placeholder="Количество")
         span.payment-calculator__item-price 10000 <i class="rouble-icon"></i>
@@ -60,7 +60,7 @@ section#calculator.payment-calculator
             span.price 10 <i class="rouble-icon"></i>
         // В остальных услугах можно удалить этот блок
         .payment-calculator__item-sub
-          input.form-group__input(type="text" placeholder="Google Диск")
+          input.form-group__input.js-text-input(type="text" placeholder="Google Диск")
         .payment-calculator__item-count
           input.form-group__input(type="text" placeholder="Количество")
         span.payment-calculator__item-price 10000 <i class="rouble-icon"></i>
