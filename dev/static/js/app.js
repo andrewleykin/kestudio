@@ -469,7 +469,7 @@
 				}
 			})
 
-			if ($('.payment-calculator__item-sub-add span').text() !== 'Акт приема загружен') {
+			if ($('.payment-calculator__item-sub-add').length && $('.payment-calculator__item-sub-add span').text() !== 'Акт приема загружен') {
 				$('.js-file-input').siblings('.payment-calculator__item-sub-add').addClass('invalid')
 				isValid = false
 			}
