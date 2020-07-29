@@ -482,6 +482,9 @@
 			if (isValidCalc) {
 				$(e.target).addClass('active').siblings().removeClass('active')
 				$('.payment-page__tab').eq($(e.target).index()).addClass('active').siblings().removeClass('active')
+				$('.payment-calculator__title').slideUp();
+				$('.payment-calculator__list').slideUp();
+				$('.payment-calculator__add').slideUp();
 			}
 		})
 	}
